@@ -60,14 +60,18 @@ textarea { resize: vertical }
 *:before,
 *:after { box-sizing: border-box; }
 
-body { font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 1.25; color: #4b536e; }
+body { min-width: 320px; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 1.25; color: #4b536e; }
 
 a { color: inherit; }
 a:hover { text-decoration: none; }
 
 img { max-width: 100%; height: auto; }
 
-h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
+h1 { font-size: 56px; line-height: 1.04; }
+h2 { font-size: 42px; line-height: 1; }
+
+h1,
+h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
 
 /* ------------------------------------------------------------ \
 	Wrapper
@@ -111,13 +115,13 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 
 .ico-search:not(.before):not(.after),
 .ico-search:before,
-.ico-search:after { width: 22px; height: 22px; background: url(../images/icons/ico-search.png) no-repeat 0 0; }
+.ico-search:after { width: 22px; height: 22px; background-image: url(../images/icons/ico-search.png); }
 
 .ico-bg:not(.before):not(.after),
 .ico-bg:before,
-.ico-bg:after { width: 48px; height: 48px; background: url(../images/icons/ico-bg.png) no-repeat 0 0; }
+.ico-bg:after { width: 48px; height: 48px; background-image: url(../images/icons/ico-bg.png); }
 
-.logo { width: 163px; height: 46px; background: url(../images/logo.png) no-repeat 0 0; }
+.logo { width: 163px; height: 46px; background-image: url(../images/logo.png); }
 
 /* Retina Display */
 
@@ -125,7 +129,7 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 	.ico-search:not(.before):not(.after),
 	.ico-search:before,
 	.ico-search:after { background-image: url(../images/icons/ico-search@2x.png); }
-	
+
 	.ico-bg:not(.before):not(.after),
 	.ico-bg:before,
 	.ico-bg:after { background-image: url(../images/icons/ico-bg@2x.png); }
@@ -181,7 +185,7 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 	Intro
 \* ------------------------------------------------------------ */
 
-.intro { position: relative; padding: 150px 0 70px; font-size: 16px; line-height: 1.63; color: #4b536e; }
+.intro { position: relative; padding: 150px 0 70px; margin-bottom: 80px; font-size: 16px; line-height: 1.63; color: #4b536e; }
 .intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(../images/intro-pattern.png) no-repeat 0 0; pointer-events: none; }
 
 .intro p { margin-bottom: 45px; }
@@ -216,3 +220,29 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
 	.btn:hover span { background-image: url(../images/btn-arrow-right@2x.png); }
 }
+
+/* ------------------------------------------------------------ *\
+	Helpers
+\* ------------------------------------------------------------ */
+
+.cols { display: flex; flex-flow: row wrap; margin: 0 -10px; }
+
+[class*="col-"] { flex: 1 1 100%; padding: 0 10px; }
+
+.col-lg-1of4 { max-width: 25%; flex: 0 0 25%; }
+
+/* ------------------------------------------------------------ *\
+	Section
+\* ------------------------------------------------------------ */
+
+.section { position: relative; z-index: 2; }
+
+.section h2 { text-align: center; margin-bottom: 45px; }
+
+/* ------------------------------------------------------------ *\
+	Services
+\* ------------------------------------------------------------ */
+
+.service { display: flex; }
+
+.service .service-inner { flex: 0 0 100%; box-shadow: 0px 0px 29px 0px rgba(30, 43, 85, 0.35); }
