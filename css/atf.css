@@ -49,6 +49,7 @@ textarea { resize: vertical }
          url('../fonts/AvertaDemoPE-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: italic;
+    font-display: swap;
 }
 
 /* ------------------------------------------------------------ \
@@ -66,7 +67,7 @@ a:hover { text-decoration: none; }
 
 img { max-width: 100%; height: auto; }
 
-h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-style: italic; font-weight: 900; color: #242d4b; margin-bottom: 20px; }
+h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
 
 /* ------------------------------------------------------------ \
 	Wrapper
