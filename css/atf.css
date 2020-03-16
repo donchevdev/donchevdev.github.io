@@ -121,6 +121,22 @@ h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color:
 .ico-bg:before,
 .ico-bg:after { width: 48px; height: 48px; background-image: url(../images/icons/ico-bg.png); }
 
+.ico-drawing:not(.before):not(.after),
+.ico-drawing:before,
+.ico-drawing:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-drawing.png); }
+
+.ico-building:not(.before):not(.after),
+.ico-building:before,
+.ico-building:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-building.png); }
+
+.ico-design:not(.before):not(.after),
+.ico-design:before,
+.ico-design:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-design.png); }
+
+.ico-repair:not(.before):not(.after),
+.ico-repair:before,
+.ico-repair:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-repair.png); }
+
 .logo { width: 163px; height: 46px; background-image: url(../images/logo.png); }
 
 /* Retina Display */
@@ -133,6 +149,22 @@ h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color:
 	.ico-bg:not(.before):not(.after),
 	.ico-bg:before,
 	.ico-bg:after { background-image: url(../images/icons/ico-bg@2x.png); }
+
+	.ico-drawing:not(.before):not(.after),
+	.ico-drawing:before,
+	.ico-drawing:after { background-image: url(../images/icons/ico-drawing@2x.png); }
+
+	.ico-building:not(.before):not(.after),
+	.ico-building:before,
+	.ico-building:after { background-image: url(../images/icons/ico-building@2x.png); }
+
+	.ico-design:not(.before):not(.after),
+	.ico-design:before,
+	.ico-design:after { background-image: url(../images/icons/ico-design@2x.png); }
+
+	.ico-repair:not(.before):not(.after),
+	.ico-repair:before,
+	.ico-repair:after { background-image: url(../images/icons/ico-repair@2x.png); }
 
   	.logo { background-image: url(../images/logo@2x.png); }
 }
@@ -245,4 +277,7 @@ h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color:
 
 .service { display: flex; }
 
-.service .service-inner { flex: 0 0 100%; box-shadow: 0px 0px 29px 0px rgba(30, 43, 85, 0.35); }
+.service .service__title { margin-bottom: 18px; font-family: 'Averta Demo PE'; font-size: 20px; font-weight: 800; font-style: italic; color: #151c33; }
+
+.service .service__inner { flex: 0 0 100%; padding: 20px 22px 25px; border-radius: 4px; box-shadow: 0px 0px 29px 0px rgba(30, 43, 85, 0.35); text-align: center; background: #fff; }
+.service .service__inner:before { margin-bottom: 10px; }
