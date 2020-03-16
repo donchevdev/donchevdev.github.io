@@ -102,18 +102,33 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 \ ------------------------------------------------------------ */
 
 .logo,
-[class*="ico-"] { display: inline-block; vertical-align: middle; background-size: contain; background-position: center center; background-repeat: no-repeat; font-size: 0; line-height: 0; text-indent: -4000px; }
+[class*="ico-"]:not(.before):not(.after),
+.before[class*="ico-"]:before,
+.after[class*="ico-"]:after { content: ''; display: inline-block; vertical-align: middle; background-size: contain; background-position: center center; background-repeat: no-repeat; }
 
-.ico-search { width: 22px; height: 22px; background: url(../images/icons/ico-search.png) no-repeat 0 0; }
-.ico-bg { width: 48px; height: 48px; background: url(../images/icons/ico-bg.png) no-repeat 0 0; }
+.logo,
+[class*="ico-"]:not(.before):not(.after) { font-size: 0; line-height: 0; text-indent: -4000px; }
+
+.ico-search:not(.before):not(.after),
+.ico-search:before,
+.ico-search:after { width: 22px; height: 22px; background: url(../images/icons/ico-search.png) no-repeat 0 0; }
+
+.ico-bg:not(.before):not(.after),
+.ico-bg:before,
+.ico-bg:after { width: 48px; height: 48px; background: url(../images/icons/ico-bg.png) no-repeat 0 0; }
 
 .logo { width: 163px; height: 46px; background: url(../images/logo.png) no-repeat 0 0; }
 
 /* Retina Display */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-	.ico-search { background-image: url(../images/icons/ico-search@2x.png); }
-	.ico-bg { background-image: url(../images/icons/ico-bg@2x.png); }
+	.ico-search:not(.before):not(.after),
+	.ico-search:before,
+	.ico-search:after { background-image: url(../images/icons/ico-search@2x.png); }
+	
+	.ico-bg:not(.before):not(.after),
+	.ico-bg:before,
+	.ico-bg:after { background-image: url(../images/icons/ico-bg@2x.png); }
 
   	.logo { background-image: url(../images/logo@2x.png); }
 }
@@ -156,8 +171,6 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 
 .search input { display: none; }
 
-.search .search__toggle { font-size: 0; line-height: 0; text-indent: -4000px; }
-
 /* ------------------------------------------------------------ *\
 	Nav Lang
 \* ------------------------------------------------------------ */
@@ -169,7 +182,7 @@ h1 { font-family: 'Averta Demo PE'; font-size: 56px; line-height: 1.04; font-sty
 \* ------------------------------------------------------------ */
 
 .intro { position: relative; padding: 150px 0 70px; font-size: 16px; line-height: 1.63; color: #4b536e; }
-.intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(../images/intro-pattern.png) no-repeat 0 0; }
+.intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(../images/intro-pattern.png) no-repeat 0 0; pointer-events: none; }
 
 .intro p { margin-bottom: 45px; }
 
