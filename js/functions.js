@@ -10,12 +10,52 @@ var $win = $(window);
 /*
  * Async styles
  */
-function preloadStyles() {
-	$('link[rel="preload"]').each(function() {
-		$doc
-			.find('body')
-				.append('<link rel="stylesheet" href="' + this.href + '" />');
-	});
-}
+$('link[rel="preload"]').each(function() {
+	$doc
+		.find('body')
+			.append('<link rel="stylesheet" href="' + this.href + '" />');
+});
 
-preloadStyles();
+// JS toggles
+$('.js-toggle').on('click', function(e){
+	e.preventDefault();
+
+	var $this       = $(this);
+	var $target     = $this.data('target') ? $($this.data('target')) : $($this.attr('href'));
+	var activeClass = $this.data('class') ? $this.data('class') : 'active';
+
+	$this
+		.add($target)
+		.toggleClass(activeClass);
+
+	if ($this.data('dispatch')) {
+		$target.trigger($this.data('dispatch'));
+	}
+});
+
+$doc.on('click touchstart', function(e){
+	var $target = $(e.target);
+
+	$('[data-autoclose]').each(function(){
+		var $this     = $(this);
+		var element   = $this.data('inner-element') ? $this.data('inner-element') : $this.data('target') ? $this.data('target') : $this.attr('href');
+		var className = $this.data('class') ? $this.data('class') : 'active';
+
+		hideElementsOnClick($target, element, className);
+	});
+});
+
+/**
+ * [hideElementsOnClick description]
+ * 
+ * @param  { jQuery Object } $target      [ Target of click event ]
+ * @param  { String } element      		  [ Classname of the element taht should be clicked in ]
+ * @param  { String } className    		  [ The class to be removed ]
+ * 
+ * @return { void }
+ */
+function hideElementsOnClick($target, element, className) {
+	if (!$target.is(element + ', ' + element + ' *, .js-toggle.' + className + ', .js-toggle.' + className + ' *')) {
+		$('.' + className).removeClass(className);
+	}
+}

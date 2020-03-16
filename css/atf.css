@@ -104,3 +104,9 @@ a:hover { text-decoration: none; }
 .nav a { position: relative; display: inline-block; padding: 8px 10px; vertical-align: middle; text-decoration: none; }
 .nav a:before { content: ''; position: absolute; width: 0; height: 3px; left: 50%; bottom: 0; transform: translateX(0); background: #1d8edd; transition: width .15s, transform .15s; }
 .nav a:hover:before { width: 60%; transform: translateX(-50%); }
+
+/* ------------------------------------------------------------ *\
+	Search
+\* ------------------------------------------------------------ */
+
+.search .search-toggle { font-size: 0; line-height: 0; text-indent: -4000px; }
