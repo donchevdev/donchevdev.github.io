@@ -264,6 +264,22 @@ h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color:
 .col-lg-1of4 { max-width: 25%; flex: 0 0 25%; }
 
 /* ------------------------------------------------------------ *\
+	Animations
+\* ------------------------------------------------------------ */
+
+[class*="fade"] { opacity: 0; visibility: hidden; transition: transform .15s, opacity .15s, visibility .15s; }
+[class*="fade"].animated { opacity: 1; visibility: visible; }
+
+.fade-top { transform: translateY(-60px); }
+.fade-top.animated { transform: translateY(0); }
+
+.fade-left { transform: translateX(-60px); }
+.fade-left.animated { transform: translateY(0); }
+
+.fade-right { transform: translateX(60px); }
+.fade-right.animated { transform: translateY(0); }
+
+/* ------------------------------------------------------------ *\
 	Section
 \* ------------------------------------------------------------ */
 
@@ -276,6 +292,11 @@ h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color:
 \* ------------------------------------------------------------ */
 
 .service { display: flex; }
+
+.services .service:nth-child(2) { transition-delay: .05s; }
+.services .service:nth-child(3) { transition-delay: .1s; }
+.services .service:nth-child(4) { transition-delay: .15s; }
+.services.animated .service { transform: translateY(0); opacity: 1; visibility: visible; }
 
 .service .service__title { margin-bottom: 18px; font-family: 'Averta Demo PE'; font-size: 20px; font-weight: 800; font-style: italic; color: #151c33; }
 
