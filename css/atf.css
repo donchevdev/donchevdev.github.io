@@ -72,7 +72,8 @@ a:hover { text-decoration: none; }
 
 .header .nav { flex: 0 1 100%; margin-right: 65px; }
 .header .container { display: flex; }
-.header .header-inner { flex: 0 0 120px; }
+.header .header-inner { display: flex; flex: 0 0 120px; align-items: center; }
+.header .header-inner .search { padding-right: 22px; margin-right: 22px; border-right: 1px solid #b9b9b9; }
 .header .header-group { display: flex; flex: 0 1 100%; justify-content: space-between; align-items: center; }
 
 .header .header-logo { position: relative; flex: 0 0 190px; padding: 17px 10px 30px; margin-right: 40px; border-radius: 0 0 20px 0; background: #272a35; }
@@ -83,14 +84,20 @@ a:hover { text-decoration: none; }
 \ ------------------------------------------------------------ */
 
 .logo,
-[class^="ico-"] { display: inline-block; vertical-align: middle; background-size: contain; background-position: center center; background-repeat: no-repeat; font-size: 0; line-height: 0; text-indent: -4000px; }
+[class*="ico-"] { display: inline-block; vertical-align: middle; background-size: contain; background-position: center center; background-repeat: no-repeat; font-size: 0; line-height: 0; text-indent: -4000px; }
+
+.ico-search { width: 22px; height: 22px; background: url(../images/icons/ico-search.png) no-repeat 0 0; }
+.ico-bg { width: 48px; height: 48px; background: url(../images/icons/ico-bg.png) no-repeat 0 0; }
 
 .logo { width: 163px; height: 46px; background: url(../images/logo.png) no-repeat 0 0; }
 
 /* Retina Display */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-  .logo { background-image: url(../images/logo@2x.png); }
+	.ico-search { background-image: url(../images/icons/ico-search@2x.png); }
+	.ico-bg { background-image: url(../images/icons/ico-bg@2x.png); }
+
+  	.logo { background-image: url(../images/logo@2x.png); }
 }
 
 /* ------------------------------------------------------------ \
@@ -106,7 +113,23 @@ a:hover { text-decoration: none; }
 .nav a:hover:before { width: 60%; transform: translateX(-50%); }
 
 /* ------------------------------------------------------------ *\
+	JS Toggle
+\* ------------------------------------------------------------ */
+
+.js-toggle { cursor: pointer; }
+
+/* ------------------------------------------------------------ *\
 	Search
 \* ------------------------------------------------------------ */
 
+.search input { display: none; }
+
 .search .search-toggle { font-size: 0; line-height: 0; text-indent: -4000px; }
+
+/* ------------------------------------------------------------ *\
+	Nav Lang
+\* ------------------------------------------------------------ */
+
+.nav-lang ul { display: none; }
+
+.nav-lang .nav-lang-active { }
