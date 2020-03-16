@@ -59,3 +59,13 @@ function hideElementsOnClick($target, element, className) {
 		$('.' + className).removeClass(className);
 	}
 }
+
+/*
+ * Add classes for dropdown nav
+ */
+
+$('.nav-dropdown').each(function() {
+	$(this)
+		.parent()
+			.addClass('has-dd');
+});
