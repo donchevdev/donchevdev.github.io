@@ -10,6 +10,19 @@
 .section-primary .section__content { flex: 0 1 100%; }
 
 /* ------------------------------------------------------------ *\
+	Section Secondary
+\* ------------------------------------------------------------ */
+
+.section-secondary { padding: 45px 0; text-align: center; }
+
+.section-secondary h2 { margin-bottom: 50px; }
+
+.section-secondary .section__actions a { position: relative; display: inline-block; font-size: 18px; font-weight: 700; text-decoration: none; }
+.section-secondary .section__actions a:before { content: ''; position: absolute; width: 0; height: 1px; left: 50%; bottom: 0; background: #fff; transition: width .15s, left .15s; }
+.section-secondary .section__actions a:after { margin-left: 10px; }
+.section-secondary .section__actions a:hover:before { width: 100%; left: 0; }
+
+/* ------------------------------------------------------------ *\
 	List Checks
 \* ------------------------------------------------------------ */
 
@@ -20,3 +33,22 @@
 
 .list-checks li:last-child,
 .list-checks li:nth-last-child(2) { margin-bottom: 0; }
+
+/* ------------------------------------------------------------ *\
+	Properties
+\* ------------------------------------------------------------ */
+
+.properties { margin-bottom: 50px; }
+
+.property { display: flex; text-align: center; }
+
+.property .property__inner { position: relative; flex: 0 0 100%; padding: 15px 12px; border-radius: 4px; background: #fff; }
+.property .property__title { margin-bottom: 12px; font-weight: 700; color: #212b49; }
+.property .property__price { margin-bottom: 18px; font-size: 24px; font-weight: 700; color: #bac2da; }
+
+.property .property__image { margin-bottom: 15px; border-radius: 4px; overflow: hidden; }
+.property .property__image img { display: block; width: 100%; }
+
+.property .property__actions a { position: static; }
+.property .property__actions a:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 1px solid transparent; border-radius: 4px; transition: border-color .15s; }
+.property .property__actions a:hover:before { border-color: #1d8edd; }

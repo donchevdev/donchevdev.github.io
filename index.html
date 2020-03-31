@@ -130,58 +130,66 @@
 
 		.ico-search:not(.before):not(.after),
 		.ico-search:before,
-		.ico-search:after { width: 22px; height: 22px; background-image: url(../images/icons/ico-search.png); }
+		.ico-search:after { width: 22px; height: 22px; background-image: url(/images/icons/ico-search.png); }
 
 		.ico-bg:not(.before):not(.after),
 		.ico-bg:before,
-		.ico-bg:after { width: 48px; height: 48px; background-image: url(../images/icons/ico-bg.png); }
+		.ico-bg:after { width: 48px; height: 48px; background-image: url(/images/icons/ico-bg.png); }
 
 		.ico-drawing:not(.before):not(.after),
 		.ico-drawing:before,
-		.ico-drawing:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-drawing.png); }
+		.ico-drawing:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-drawing.png); }
 
 		.ico-building:not(.before):not(.after),
 		.ico-building:before,
-		.ico-building:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-building.png); }
+		.ico-building:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-building.png); }
 
 		.ico-design:not(.before):not(.after),
 		.ico-design:before,
-		.ico-design:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-design.png); }
+		.ico-design:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-design.png); }
 
 		.ico-repair:not(.before):not(.after),
 		.ico-repair:before,
-		.ico-repair:after { width: 60px; height: 60px; background-image: url(../images/icons/ico-repair.png); }
+		.ico-repair:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-repair.png); }
 
-		.logo { width: 163px; height: 46px; background-image: url(../images/logo.png); }
+		.ico-arrow-right:not(.before):not(.after),
+		.ico-arrow-right:before,
+		.ico-arrow-right:after { width: 13px; height: 9px; background-image: url(/images/icons/ico-arrow-right.png); }
+
+		.logo { width: 163px; height: 46px; background-image: url(/images/logo.png); }
 
 		/* Retina Display */
 
 		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
 			.ico-search:not(.before):not(.after),
 			.ico-search:before,
-			.ico-search:after { background-image: url(../images/icons/ico-search@2x.png); }
+			.ico-search:after { background-image: url(/images/icons/ico-search@2x.png); }
 
 			.ico-bg:not(.before):not(.after),
 			.ico-bg:before,
-			.ico-bg:after { background-image: url(../images/icons/ico-bg@2x.png); }
+			.ico-bg:after { background-image: url(/images/icons/ico-bg@2x.png); }
 
 			.ico-drawing:not(.before):not(.after),
 			.ico-drawing:before,
-			.ico-drawing:after { background-image: url(../images/icons/ico-drawing@2x.png); }
+			.ico-drawing:after { background-image: url(/images/icons/ico-drawing@2x.png); }
 
 			.ico-building:not(.before):not(.after),
 			.ico-building:before,
-			.ico-building:after { background-image: url(../images/icons/ico-building@2x.png); }
+			.ico-building:after { background-image: url(/images/icons/ico-building@2x.png); }
 
 			.ico-design:not(.before):not(.after),
 			.ico-design:before,
-			.ico-design:after { background-image: url(../images/icons/ico-design@2x.png); }
+			.ico-design:after { background-image: url(/images/icons/ico-design@2x.png); }
 
 			.ico-repair:not(.before):not(.after),
 			.ico-repair:before,
-			.ico-repair:after { background-image: url(../images/icons/ico-repair@2x.png); }
+			.ico-repair:after { background-image: url(/images/icons/ico-repair@2x.png); }
 
-		  	.logo { background-image: url(../images/logo@2x.png); }
+			.ico-arrow-right:not(.before):not(.after),
+			.ico-arrow-right:before,
+			.ico-arrow-right:after { background-image: url(/images/icons/ico-arrow-right@2x.png); }
+
+		  	.logo { background-image: url(/images/logo@2x.png); }
 		}
 
 		/* ------------------------------------------------------------ \
@@ -233,7 +241,7 @@
 		\* ------------------------------------------------------------ */
 
 		.intro { position: relative; padding: 150px 0 70px; margin-bottom: 80px; font-size: 16px; line-height: 1.63; color: #4b536e; }
-		.intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(../images/intro-pattern.png) no-repeat 0 0; pointer-events: none; }
+		.intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(/images/intro-pattern.png) no-repeat 0 0; pointer-events: none; }
 
 		.intro p { margin-bottom: 45px; }
 
@@ -256,7 +264,16 @@
 		.btn:hover span:before { transform: translateX(0); opacity: 1; visibility: visible; }
 
 		.btn span { position: relative; padding: 0 30px; }
-		.btn span:before { content: ''; position: absolute; width: 13px; height: 9px; top: 50%; right: 0; margin-top: -3px; transform: translateX(-7px); opacity: 0; visibility: hidden; background: url(../images/btn-arrow-right.png) no-repeat 0 0; transition: transform .15s, opacity .15s, visibility .15s; }
+		.btn span:before { position: absolute; top: 50%; right: 0; margin-top: -3px; transform: translateX(-7px); opacity: 0; visibility: hidden; transition: transform .15s, opacity .15s, visibility .15s; }
+
+		/*  Modifier: Btn Transparent */
+
+		.btn--transparent { padding-top: 10px; padding-bottom: 10px; border: 1px solid #1d8edd; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #1d8edd; background: none; transition: color .15s, background .15s; }
+		.btn--transparent:hover { color: #fff; background: #1d8edd; }
+
+		/*  Modifier: Btn XS */
+
+		.btn--xs { min-width: 150px; }
 
 		/*  Modifier: Btn MD */
 
@@ -265,18 +282,30 @@
 		/* Retina Display */
 
 		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-			.btn:hover span { background-image: url(../images/btn-arrow-right@2x.png); }
+			.btn:hover span { background-image: url(/images/btn-arrow-right@2x.png); }
 		}
 
 		/* ------------------------------------------------------------ *\
 			Helpers
 		\* ------------------------------------------------------------ */
+	
+		/* Columns */
 
 		.cols { display: flex; flex-flow: row wrap; margin: 0 -10px; }
 
 		[class*="col-"] { flex: 1 1 100%; padding: 0 10px; }
 
 		.col-lg--1of4 { max-width: 25%; flex: 0 0 25%; }
+
+		/* BG Dark */
+
+		.bg-dark { color: #fff; 
+			background: rgb(39,42,53);
+			background: -moz-linear-gradient(left, rgba(39,42,53,1) 0%, rgba(55,59,72,1) 100%);
+			background: -webkit-linear-gradient(left, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
+			background: linear-gradient(to right, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
+		}
+		.bg-dark h2 { color: #fff; }
 
 		/* ------------------------------------------------------------ *\
 			Animations
@@ -403,7 +432,7 @@
 			
 					<p>Дончев Комерс 96 е фирма занимаваща се с <strong>проектиране, строителство и ремонт на жилищни сгради,</strong> фамилни къщи, басейни, огради и пр. На пазара сме от 1996 г., но със строителство се занимаваме след 2004г.  Мисията ни е планирането на устойчиви в бъдещето сгради и съоръжения, създаване на стойностни проекти на всяко място, под което поставяме името си и изграждане на мрежа от доволни клиенти.</p>
 			
-					<a href="#" class="btn btn--md"><span>Имоти за продан</span></a>
+					<a href="#" class="btn btn--md"><span class="ico-arrow-right before">Имоти за продан</span></a>
 				</div>
 			
 				<div class="intro__image animate fade-right">
@@ -452,7 +481,7 @@
 			</div>
 		</section>
 
-		<section class="section-primary">
+		<section class="section-primary lazyload">
 			<div class="section__content">
 				<h2>Нашите сгради:</h2>
 
@@ -475,64 +504,72 @@
 		</section>
 	</div>
 
-	<div class="section-secondary bg-dark">
+	<div class="section-secondary lazyload bg-dark">
 		<div class="container">
 			<h2>Имоти за продан без посредник</h2>
 
 			<div class="properties cols">
 				<div class="property col-lg--1of4">
-					<div class="property__image">
-						<img data-src="" alt="Alt text here" class="lazyload">
-					</div>
-
-					<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-
-					<div class="property__price">59 900 €</div>
-
-					<div class="property__actions">
-						<a href="#" class="btn btn--transparent">Купи Сега</a>
-					</div>
-				</div>
-
-				<div class="property col-lg--1of4">
-					<div class="property__image">
-						<img data-src="" alt="Alt text here" class="lazyload">
-					</div>
-
-					<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-
-					<div class="property__price">59 900 €</div>
-
-					<div class="property__actions">
-						<a href="#" class="btn btn--transparent">Купи Сега</a>
+					<div class="property__inner">
+						<div class="property__image">
+							<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+						</div>
+					
+						<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+					
+						<div class="property__price">59 900 €</div>
+					
+						<div class="property__actions">
+							<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
+						</div>
 					</div>
 				</div>
 
 				<div class="property col-lg--1of4">
-					<div class="property__image">
-						<img data-src="" alt="Alt text here" class="lazyload">
-					</div>
-
-					<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-
-					<div class="property__price">59 900 €</div>
-
-					<div class="property__actions">
-						<a href="#" class="btn btn--transparent">Купи Сега</a>
+					<div class="property__inner">
+						<div class="property__image">
+							<img data-src="/images/temp/property-image-2.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+						</div>
+					
+						<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+					
+						<div class="property__price">59 900 €</div>
+					
+						<div class="property__actions">
+							<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
+						</div>
 					</div>
 				</div>
 
 				<div class="property col-lg--1of4">
-					<div class="property__image">
-						<img data-src="" alt="Alt text here" class="lazyload">
+					<div class="property__inner">
+						<div class="property__image">
+							<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+						</div>
+					
+						<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+					
+						<div class="property__price">59 900 €</div>
+					
+						<div class="property__actions">
+							<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
+						</div>
 					</div>
+				</div>
 
-					<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-
-					<div class="property__price">59 900 €</div>
-
-					<div class="property__actions">
-						<a href="#" class="btn btn--transparent">Купи Сега</a>
+				<div class="property col-lg--1of4">
+					<div class="property__inner">
+						<div class="property__image">
+							<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+						</div>
+					
+						<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+					
+						<div class="property__price">59 900 €</div>
+					
+						<div class="property__actions">
+							<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
+						</div>
 					</div>
 				</div>
 			</div>
