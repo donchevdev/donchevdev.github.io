@@ -82,6 +82,12 @@
 		h1,
 		h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
 
+		.lazyload:before,
+		.lazyload:after,
+		.lazyload *,
+		.lazyload *:before,
+		.lazyload *:after { background-image: none !important; }
+
 		/* ------------------------------------------------------------ \
 			Wrapper
 		\ ------------------------------------------------------------ */
@@ -270,7 +276,7 @@
 
 		[class*="col-"] { flex: 1 1 100%; padding: 0 10px; }
 
-		.col-lg-1of4 { max-width: 25%; flex: 0 0 25%; }
+		.col-lg--1of4 { max-width: 25%; flex: 0 0 25%; }
 
 		/* ------------------------------------------------------------ *\
 			Animations
@@ -408,11 +414,11 @@
 	</div>
 	
 	<div class="container">
-		<section class="section">
+		<section class="section lazyload">
 			<h2 class="animate fade-top">Какво предлагаме?</h2>
 
 			<div class="cols services animate">
-				<div class="col-lg-1of4 service fade-top">
+				<div class="col-lg--1of4 service fade-top">
 					<div class="service__inner ico-drawing before">
 						<div class="service__title">Проектиране</div>
 
@@ -420,7 +426,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-1of4 service fade-top">
+				<div class="col-lg--1of4 service fade-top">
 					<div class="service__inner ico-building before">
 						<div class="service__title">Строителство</div>
 
@@ -428,7 +434,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-1of4 service fade-top">
+				<div class="col-lg--1of4 service fade-top">
 					<div class="service__inner ico-design before">
 						<div class="service__title">Интериорен Дизайн</div>
 
@@ -436,13 +442,35 @@
 					</div>
 				</div>
 
-				<div class="col-lg-1of4 service fade-top">
+				<div class="col-lg--1of4 service fade-top">
 					<div class="service__inner ico-repair before">
 						<div class="service__title">Ремонтни Дейности</div>
 
 						<div class="service__entry">Подобрения, обновявания и ремоделиране. Имаме идеите и опита за персонализирането на вашия дом – от основен ремонт на обекта до прекрояване на кухнята или банята, за да създадем заедно вашия дом – мечта. Можете да се допитате до експертите ни и да разгледате нашите проекти.</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="section-primary">
+			<div class="section__content">
+				<h2>Нашите сгради:</h2>
+
+				<ul class="list-checks">
+					<li>Отговарят на всички БДС стандарти</li>
+
+					<li>Са високо енергийно ефективни</li>
+
+					<li>Са екологично собразни</li>
+
+					<li>Са изградени от високо качествеи материали</li>
+				</ul>
+
+				<a href="#" class="btn btn--md">Към Нашето Портфолио</a>
+			</div>
+
+			<div class="section__image">
+				<img src="" alt="" class="lazyload">
 			</div>
 		</section>
 	</div>
