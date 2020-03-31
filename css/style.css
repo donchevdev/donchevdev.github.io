@@ -73,3 +73,37 @@
 
 .project .project__title { margin-bottom: 23px; font-size: 18px; font-weight: 700; color: #fff; }
 .project .project__title span { display: block; font-size: 14px; font-weight: 400; }
+
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer { padding: 40px 0; font-size: 14px; line-height: 1.43; color: rgba(255, 255, 255, .5); background: #1e2027; }
+
+.footer .footer__cols { margin: 0 -35px; }
+.footer .footer__title { margin-bottom: 13px; font-size: 16px; font-weight: 700; }
+
+.footer .footer__col { position: relative; padding: 0 35px; }
+.footer .footer__col:before { margin-left: -1px; background: rgba(255, 255, 255, 0.1); }
+.footer .footer__col:after { background: #16181c; }
+
+.footer .footer__nav li { position: relative; padding-left: 17px; }
+.footer .footer__nav li:before { content: ''; position: absolute; width: 8px; height: 8px; top: 50%; left: 0; margin-top: -4px; transform: rotate(45deg); opacity: .5; border-top: 1px solid #fff; border-right: 1px solid #fff; }
+.footer .footer__nav li + li { margin-top: 7px; }
+.footer .footer__nav a { text-decoration: none; transition: color .15s; }
+.footer .footer__nav a:hover { color: #1d8edd; }
+
+.footer .footer__social-link { display: inline-block; vertical-align: middle; transition: opacity .15s; }
+.footer .footer__social-link:hover { opacity: .7; }
+
+.footer .footer__list a { text-decoration: none; }
+.footer .footer__list li { position: relative; padding-left: 30px; }
+.footer .footer__list li:before { content: ''; position: absolute; top: 50%; left: 10px; transform: translate(-50%, -50%); }
+.footer .footer__list li + li { margin-top: 8px; }
+
+.footer .footer__entry { margin-bottom: 10px; }
+.footer .footer__entry a { font-weight: 700; text-decoration: none; transition: color .15s; }
+.footer .footer__entry a:hover { color: #1d8edd; }
+
+.footer .footer__col + .footer__col:before,
+.footer .footer__col + .footer__col:after { content: ''; position: absolute; width: 1px; height: 100%; top: 0; left: 0; }
