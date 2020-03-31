@@ -367,16 +367,21 @@
 		\* ------------------------------------------------------------ */
 
 		[class*="fade"] { opacity: 0; visibility: hidden; transition: transform .3s, opacity .3s, visibility .3s; }
-		[class*="fade"].animated { opacity: 1; visibility: visible; }
 
 		.fade-top { transform: translateY(-60px); }
-		.fade-top.animated { transform: translateY(0); }
-
 		.fade-left { transform: translateX(-60px); }
-		.fade-left.animated { transform: translateY(0); }
-
 		.fade-right { transform: translateX(60px); }
-		.fade-right.animated { transform: translateY(0); }
+
+		.animated [class*="fade"],
+		[class*="fade"].animated { opacity: 1; visibility: visible; }
+		
+		.animated .fade-top,
+		.fade-top.animated { transform: translateY(0); }
+		
+		.animated .fade-left,
+		.fade-left.animated,
+		.animated .fade-right,
+		.fade-right.animated { transform: translateX(0); }
 
 		/* ------------------------------------------------------------ *\
 			Section
@@ -535,8 +540,8 @@
 				</div>
 			</section>
 
-			<section class="section-primary lazyload">
-				<div class="section__content animate fade-left">
+			<section class="section-primary animate lazyload">
+				<div class="section__content fade-left">
 					<h2>Нашите сгради:</h2>
 
 					<ul class="list-checks">
@@ -552,7 +557,7 @@
 					<a href="#" class="btn btn--md">Към Нашето Портфолио</a>
 				</div>
 
-				<div class="section__image animate fade-right">
+				<div class="section__image fade-right">
 					<img data-src="/images/temp/section-image.png" alt="Alt text here" class="lazyload" width="458" height="453">
 				</div>
 			</section>
