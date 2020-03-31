@@ -374,14 +374,9 @@
 
 		.animated [class*="fade"],
 		[class*="fade"].animated { opacity: 1; visibility: visible; }
-		
-		.animated .fade-top,
-		.fade-top.animated { transform: translateY(0); }
-		
-		.animated .fade-left,
-		.fade-left.animated,
-		.animated .fade-right,
-		.fade-right.animated { transform: translateX(0); }
+
+		.animated [class*="fade-"],
+		.animated[class*="fade-"] { transform: translate(0, 0); }
 
 		/* ------------------------------------------------------------ *\
 			Section
