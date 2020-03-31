@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Section Primary
+\* ------------------------------------------------------------ */
+
+.section-primary { display: flex; margin-bottom: 50px; align-items: center; }
+
+.section-primary h2 { margin-bottom: 50px; }
+
+.section-primary .section__image { flex: 0 0 460px; margin-left: 50px; }
+.section-primary .section__content { flex: 0 1 100%; }
+
+/* ------------------------------------------------------------ *\
+	List Checks
+\* ------------------------------------------------------------ */
+
+.list-checks { display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; margin-bottom: 50px; font-size: 16px; line-height: 1.13; }
+
+.list-checks li { position: relative; flex: 0 0 35%; padding-left: 50px; margin-bottom: 45px; }
+.list-checks li:before { content: ''; position: absolute; width: 32px; height: 32px; top: 50%; left: 0; margin-top: -16px; background: url(../images/check-icon.png) no-repeat 0 0 / 100% 100%; }
+
+.list-checks li:last-child,
+.list-checks li:nth-last-child(2) { margin-bottom: 0; }
