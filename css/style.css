@@ -13,9 +13,9 @@
 	Section Secondary
 \* ------------------------------------------------------------ */
 
-.section-secondary { padding: 45px 0; text-align: center; }
+.section-secondary { padding: 50px 0; text-align: center; }
 
-.section-secondary h2 { margin-bottom: 50px; }
+.section-secondary h2 { margin-bottom: 55px; }
 
 .section-secondary .section__actions a { position: relative; display: inline-block; font-size: 18px; font-weight: 700; text-decoration: none; }
 .section-secondary .section__actions a:before { content: ''; position: absolute; width: 0; height: 1px; left: 50%; bottom: 0; background: #fff; transition: width .15s, left .15s; }
@@ -30,9 +30,7 @@
 
 .list-checks li { position: relative; flex: 0 0 35%; padding-left: 50px; margin-bottom: 45px; }
 .list-checks li:before { content: ''; position: absolute; width: 32px; height: 32px; top: 50%; left: 0; margin-top: -16px; background: url(../images/check-icon.png) no-repeat 0 0 / 100% 100%; }
-
-.list-checks li:last-child,
-.list-checks li:nth-last-child(2) { margin-bottom: 0; }
+.list-checks li:nth-last-child(-n+2) { margin-bottom: 0; }
 
 /* ------------------------------------------------------------ *\
 	Properties
@@ -52,3 +50,26 @@
 .property .property__actions a { position: static; }
 .property .property__actions a:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 1px solid transparent; border-radius: 4px; transition: border-color .15s; }
 .property .property__actions a:hover:before { border-color: #1d8edd; }
+
+/* ------------------------------------------------------------ *\
+	Projects
+\* ------------------------------------------------------------ */
+
+.projects .project { margin-bottom: 20px; }
+.projects .project:nth-last-child(-n+3) { margin-bottom: 0; }
+
+.project { position: relative; font-size: 14px; line-height: 1.43; color: #fff; text-align: center; }
+
+.project img { display: block; width: 100%; transition: filter .15s; }
+.project a:hover .project__overlay { transform: scale(1); opacity: 1; visibility: visible; }
+.project a:hover img { filter: blur(5px); }
+
+.project .btn { pointer-events: none; }
+.project .btn:after { position: relative; top: -1px; margin-left: 10px; }
+
+.project .project__inner { flex: 0 0 100%; padding: 10px 20px; }
+.project .project__entry { margin-bottom: 35px; }
+.project .project__overlay { position: absolute; display: flex; align-items: center; top: 15px; right: 25px; bottom: 15px; left: 25px; transform: scale(.95); opacity: 0; visibility: hidden; background: rgba(29, 142, 221, 0.9); transition: transform .15s, opacity .15s, visibility .15s; }
+
+.project .project__title { margin-bottom: 23px; font-size: 18px; font-weight: 700; color: #fff; }
+.project .project__title span { display: block; font-size: 14px; font-weight: 400; }
