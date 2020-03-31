@@ -84,7 +84,7 @@
 .footer a:hover { color: #1d8edd; }
 
 .footer .footer__cols { margin: 0 -35px; }
-.footer .footer__title { margin-bottom: 13px; font-size: 16px; font-weight: 700; }
+.footer .footer__title { margin-bottom: 13px; font-size: 16px; font-weight: 700; color: #fff; }
 
 .footer .footer__col { position: relative; padding: 0 35px; }
 .footer .footer__col:before { margin-left: -1px; background: rgba(255, 255, 255, 0.1); }
