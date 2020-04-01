@@ -89,6 +89,11 @@
 		.lazyload *:before,
 		.lazyload *:after { background-image: none !important; }
 
+		@media (max-width: 1023px) {
+			h1 { font-size: 38px; }
+			h2 { font-size: 32px; }
+		}
+
 		/* ------------------------------------------------------------ \
 			Wrapper
 		\ ------------------------------------------------------------ */
@@ -116,6 +121,10 @@
 
 		.header .header__logo { position: relative; flex: 0 0 190px; padding: 17px 10px 30px; margin-right: 40px; border-radius: 0 0 20px 0; background: #272a35; }
 		.header .header__logo:before { content: ''; position: absolute; width: 100vw; height: 100%; top: 0; right: 100%; background: #272a35; }
+
+		@media (max-width: 1240px) {
+			.header .nav { margin-right: 20px; }
+		}
 
 		/* ------------------------------------------------------------ \
 			Logos, Icons
@@ -255,6 +264,11 @@
 		.nav > ul > li:hover > a:before { width: 60%; transform: translateX(-50%); }
 		.nav > ul > li:hover > .nav-dropdown { transform: translateY(0); opacity: 1; visibility: visible; }
 
+		@media (max-width: 1240px) {
+			.nav > ul > li { margin: 0 5px; }
+			.nav > ul > li > a { font-size: 15px; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Nav Dropdown
 		\* ------------------------------------------------------------ */
@@ -298,6 +312,25 @@
 
 		.intro .intro__image { position: absolute; max-width: 50%; top: 0; right: 0; overflow: hidden; }
 		.intro .intro__image:before { content: ''; position: absolute; width: 200%; height: 200%; border-radius: 70px; bottom: 0; left: 21%; box-shadow: 0 0 0 300px #fff; transform: rotate(-12deg); transform-origin: 0 100%; }
+
+		@media (max-width: 1240px) {
+			.intro { padding-bottom: 0; }
+
+			.intro .intro__image { max-height: 330px; }
+
+			.intro .intro__content { width: 100%; padding-top: 50px; }
+			.intro .intro__content h1 { padding-right: 45%; }
+		}
+
+		@media (max-width: 1023px) {
+			.intro p { margin-bottom: 25px; }
+
+			.intro .intro__image { max-width: none; width: 115%; }
+			.intro .intro__image img { display: block; width: 100%; }
+			
+			.intro .intro__content { padding-top: 185px; text-align: center; }
+			.intro .intro__content h1 { padding-right: 0; }
+		}
 
 		/* ------------------------------------------------------------ *\
 			Btn
@@ -352,6 +385,14 @@
 		.col-lg--1of3 { max-width: 33.3%; flex: 0 0 33.3%; }
 		.col-lg--1of4 { max-width: 25%; flex: 0 0 25%; }
 
+		@media (max-width: 1240px) {
+			.col-md--1of2 { max-width: 50%; flex: 0 0 50%; }
+		}
+
+		@media (max-width: 1023px) {
+			.col-sm--1of2 { max-width: 50%; flex: 0 0 50%; }
+		}
+
 		/* BG Dark */
 
 		.bg-dark { color: #fff; 
@@ -386,6 +427,10 @@
 
 		.section h2 { text-align: center; margin-bottom: 45px; }
 
+		@media (max-width: 1023px) {
+			.section { margin-bottom: 30px; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Services
 		\* ------------------------------------------------------------ */
@@ -401,6 +446,10 @@
 
 		.service .service__inner { flex: 0 0 100%; padding: 20px 22px 25px; border-radius: 4px; box-shadow: 0px 0px 29px 0px rgba(30, 43, 85, 0.35); text-align: center; background: #fff; }
 		.service .service__inner:before { margin-bottom: 10px; }
+
+		@media (max-width: 1240px) {
+			.services .service { margin-bottom: 20px; }
+		}
 	</style>
 
 	<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" as="style">
@@ -501,7 +550,7 @@
 				<h2 class="animate fade-top">Какво предлагаме?</h2>
 
 				<div class="cols services animate">
-					<div class="col-lg--1of4 service fade-top">
+					<div class="col-lg--1of4 col-md--1of2 service fade-top">
 						<div class="service__inner ico-drawing before">
 							<div class="service__title">Проектиране</div>
 
@@ -509,7 +558,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg--1of4 service fade-top">
+					<div class="col-lg--1of4 col-md--1of2 service fade-top">
 						<div class="service__inner ico-building before">
 							<div class="service__title">Строителство</div>
 
@@ -517,7 +566,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg--1of4 service fade-top">
+					<div class="col-lg--1of4 col-md--1of2 service fade-top">
 						<div class="service__inner ico-design before">
 							<div class="service__title">Интериорен Дизайн</div>
 
@@ -525,7 +574,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg--1of4 service fade-top">
+					<div class="col-lg--1of4 col-md--1of2 service fade-top">
 						<div class="service__inner ico-repair before">
 							<div class="service__title">Ремонтни Дейности</div>
 
@@ -565,65 +614,81 @@
 				<div class="properties cols">
 					<div class="property col-lg--1of4">
 						<div class="property__inner">
-							<div class="property__image">
-								<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
-							</div>
-						
-							<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-						
-							<div class="property__price">59 900 €</div>
-						
-							<div class="property__actions">
-								<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
-							</div>
+							<a href="#">
+								<div class="property__image">
+									<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+								</div>
+							
+								<div class="property__container">
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+															
+									<div class="property__price">59 900 €</div>
+															
+									<div class="property__actions">
+										<span class="btn btn--transparent btn--xs">Купи Сега</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 
 					<div class="property col-lg--1of4">
 						<div class="property__inner">
-							<div class="property__image">
-								<img data-src="/images/temp/property-image-2.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
-							</div>
-						
-							<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-						
-							<div class="property__price">59 900 €</div>
-						
-							<div class="property__actions">
-								<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
-							</div>
+							<a href="#">
+								<div class="property__image">
+									<img data-src="/images/temp/property-image-2.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+								</div>
+							
+								<div class="property__container">
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+															
+									<div class="property__price">59 900 €</div>
+															
+									<div class="property__actions">
+										<span class="btn btn--transparent btn--xs">Купи Сега</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 
 					<div class="property col-lg--1of4">
 						<div class="property__inner">
-							<div class="property__image">
-								<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
-							</div>
-						
-							<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-						
-							<div class="property__price">59 900 €</div>
-						
-							<div class="property__actions">
-								<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
-							</div>
+							<a href="#">
+								<div class="property__image">
+									<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+								</div>
+							
+								<div class="property__container">
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+															
+									<div class="property__price">59 900 €</div>
+															
+									<div class="property__actions">
+										<span class="btn btn--transparent btn--xs">Купи Сега</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 
 					<div class="property col-lg--1of4">
 						<div class="property__inner">
-							<div class="property__image">
-								<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
-							</div>
-						
-							<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
-						
-							<div class="property__price">59 900 €</div>
-						
-							<div class="property__actions">
-								<a href="#" class="btn btn--transparent btn--xs">Купи Сега</a>
-							</div>
+							<a href="#">
+								<div class="property__image">
+									<img data-src="/images/temp/property-image.jpg" alt="Alt text here" class="lazyload" width="256" height="155">
+								</div>
+							
+								<div class="property__container">
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+															
+									<div class="property__price">59 900 €</div>
+															
+									<div class="property__actions">
+										<span class="btn btn--transparent btn--xs">Купи Сега</span>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -639,7 +704,7 @@
 				<h2>Някои от нашите проекти</h2>
 
 				<div class="projects cols">
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -655,7 +720,7 @@
 						</a>
 					</div>
 
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -671,7 +736,7 @@
 						</a>
 					</div>
 
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -687,7 +752,7 @@
 						</a>
 					</div>
 
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -703,7 +768,7 @@
 						</a>
 					</div>
 
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -719,7 +784,7 @@
 						</a>
 					</div>
 
-					<div class="project col-lg--1of3">
+					<div class="project col-lg--1of3 col-sm--1of2">
 						<a href="#">
 							<img data-src="images/temp/project-image.jpg" alt="Alt text here" width="380" height="348" class="lazyload">
 
@@ -738,95 +803,95 @@
 			</div>
 		</section>
 	</div>
-</div>
 
-<footer class="footer animate fade-top lazyload">
-	<div class="container">
-		<div class="footer__cols cols">
-			<div class="footer__col col-lg--1of4">
-				<div class="footer__title">Контакти:</div>
+	<footer class="footer animate fade-top lazyload">
+		<div class="container">
+			<div class="footer__cols cols">
+				<div class="footer__col col-lg--1of4 col-sm--1of2">
+					<div class="footer__title">Контакти:</div>
 
-				<ul class="footer__list">
-					<li class="ico-building-mini before">
-						<a href="#">ДОНЧЕВ КОМЕРС 96</a>
-					</li>
-
-					<li class="ico-pin before">
-						<a href="#">улица "Беласица" 42, 9000 Варна</a>
-					</li>
-
-					<li class="ico-phone before">
-						<a href="tel:0899988689">0899 988 689</a>, <a href="tel:0897882577">0897 882 577</a>
-					</li>
-
-					<li class="ico-email before">
-						<a href="mailto:office@donchev-96.com">office@donchev-96.com</a>
-					</li>
-
-					<li class="ico-globe before">
-						<a href="#">donchev-96.com</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="footer__col col-lg--1of4">
-				<div class="footer__title">За Нас:</div>
-
-				<div class="footer__entry">Дончев Комерс 96 е фирма занимаваща се със строителна дейност - проектиране, изграждане, ремонт. На пазара от 12 години. Над 20 луксозни завършени проекти. <a href="#">Прочети още...</a></div>
-
-				<a href="#" class="footer__social-link ico-facebook">Facebook</a>
-			</div>
-
-			<div class="footer__col col-lg--1of4">
-				<div class="footer__title">Кратки връзки:</div>
-
-				<nav class="footer__nav">
-					<ul>
-						<li>
-							<a href="#">Начало</a>
+					<ul class="footer__list">
+						<li class="ico-building-mini before">
+							<a href="#">ДОНЧЕВ КОМЕРС 96</a>
 						</li>
 
-						<li>
-							<a href="#">За нас</a>
+						<li class="ico-pin before">
+							<a href="#">улица "Беласица" 42, 9000 Варна</a>
 						</li>
 
-						<li>
-							<a href="#">Проекти</a>
+						<li class="ico-phone before">
+							<a href="tel:0899988689">0899 988 689</a>, <a href="tel:0897882577">0897 882 577</a>
 						</li>
 
-						<li>
-							<a href="#">Контакти</a>
+						<li class="ico-email before">
+							<a href="mailto:office@donchev-96.com">office@donchev-96.com</a>
+						</li>
+
+						<li class="ico-globe before">
+							<a href="#">donchev-96.com</a>
 						</li>
 					</ul>
-				</nav>
-			</div>
+				</div>
 
-			<div class="footer__col col-lg--1of4">
-				<div class="footer__title">Имоти за продан без посредник:</div>
+				<div class="footer__col col-lg--1of4 col-sm--1of2">
+					<div class="footer__title">За Нас:</div>
 
-				<nav class="footer__nav">
-					<ul>
-						<li>
-							<a href="#">Апартаменти</a>
-						</li>
+					<div class="footer__entry">Дончев Комерс 96 е фирма занимаваща се със строителна дейност - проектиране, изграждане, ремонт. На пазара от 12 години. Над 20 луксозни завършени проекти. <a href="#">Прочети още...</a></div>
 
-						<li>
-							<a href="#">Кабинети</a>
-						</li>
+					<a href="#" class="footer__social-link ico-facebook">Facebook</a>
+				</div>
 
-						<li>
-							<a href="#">Гаражи</a>
-						</li>
+				<div class="footer__col col-lg--1of4 col-sm--1of2">
+					<div class="footer__title">Кратки връзки:</div>
 
-						<li>
-							<a href="#">Парко места</a>
-						</li>
-					</ul>
-				</nav>
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Начало</a>
+							</li>
+
+							<li>
+								<a href="#">За нас</a>
+							</li>
+
+							<li>
+								<a href="#">Проекти</a>
+							</li>
+
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="footer__col col-lg--1of4 col-sm--1of2">
+					<div class="footer__title">Имоти за продан без посредник:</div>
+
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Апартаменти</a>
+							</li>
+
+							<li>
+								<a href="#">Кабинети</a>
+							</li>
+
+							<li>
+								<a href="#">Гаражи</a>
+							</li>
+
+							<li>
+								<a href="#">Парко места</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</div>
-</footer>
+	</footer>
+</div>
 
 <script src="js/functions.js" async></script>
 

@@ -69,7 +69,6 @@ function hideElementsOnClick($target, element, className) {
 /*
  * Add classes for dropdown nav
  */
-
 $('.nav-dropdown').each(function() {
 	$(this)
 		.parent()
@@ -82,6 +81,6 @@ $('.nav-dropdown').each(function() {
 new ScrollAnimator($('.animate'), {
 	animatedClass: 'animated',
 	offset       : function() {
-		return $win.outerHeight() / 2;	
+		return $win.outerHeight() / 1.2;	
 	}
 });
