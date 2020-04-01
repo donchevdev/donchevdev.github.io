@@ -177,7 +177,7 @@
 
 	.ico-arrow-down:not(.before):not(.after),
 	.ico-arrow-down.before:before,
-	.ico-arrow-down.after:after { background-image: url(/images/icons/ico-arrow-down.png); }
+	.ico-arrow-down.after:after { background-image: url(/images/icons/ico-arrow-down@2x.png); }
 
   	.logo { background-image: url(/images/logo@2x.png); }
 }
