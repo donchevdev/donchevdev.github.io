@@ -259,7 +259,9 @@
 		.intro .intro__content { position: relative; width: 49.17%; z-index: 2; }
 
 		.intro .intro__image { position: absolute; max-width: 50%; top: 0; right: 0; overflow: hidden; }
-		.intro .intro__image:before { content: ''; position: absolute; width: 200%; height: 200%; border-radius: 70px; bottom: 0; left: 21%; box-shadow: 0 0 0 300px #fff; transform: rotate(-12deg); transform-origin: 0 100%; }
+		.intro .intro__image:before { content: ''; position: absolute; width: 200%; height: 200%; border-radius: 70px; bottom: 0; left: 21%; box-shadow: 0 0 0 300px #fff; transform: rotate(-12deg); transform-origin: 0 100%; z-index: 2; }
+		.intro .intro__image img { position: absolute; display: block; width: 100%; top: 0; left: 0; opacity: 0; visibility: hidden; transition: opacity .7s, visibility .7s; }
+		.intro .intro__image .active { position: static; top: 0; left: 0; opacity: 1; visibility: visible; }
 
 		@media (max-width: 1240px) {
 			.intro { padding-bottom: 0; }
@@ -672,8 +674,10 @@
 					<a href="#" class="btn btn--md"><span class="ico-arrow-right before">Имоти за продан</span></a>
 				</div>
 			
-				<div class="intro__image animate fade-right">
-					<img src="images/temp/intro-image.jpg" alt="" width="1016" height="649">
+				<div class="intro__image js-fader animate fade-right">
+					<img src="images/temp/intro-image.jpg" alt="" width="1016" height="649" class="active">
+
+					<img src="images/temp/intro-image-2.jpg" alt="" width="1016" height="649">
 				</div>
 			</div>
 		</div>

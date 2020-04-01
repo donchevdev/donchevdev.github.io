@@ -23,6 +23,11 @@ var $services = $('.services');
 moveLanguageNavigation();
 
 /*
+ * Start intro images fading
+ */
+startFader();
+
+/*
  * Window related events
  */
 $win
@@ -148,4 +153,21 @@ function moveLanguageNavigation() {
 	} else if ($headerInner.find($navLang).length && $win.outerWidth() < 1024) {
 		$logo.after($navLang);
 	}
+}
+
+/*
+ * Intro images fading
+ */
+function startFader() {
+	var $currentActive = $('.js-fader .active');
+	var activeClass    = 'active';
+
+	setInterval(function() {
+		$currentActive  = $currentActive.next().length ? $currentActive.next() : $currentActive.siblings(':first-child');
+
+		$currentActive
+			.addClass(activeClass)
+			.siblings()
+				.removeClass(activeClass);
+	}, 5000);
 }
