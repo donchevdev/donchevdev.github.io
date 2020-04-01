@@ -76,6 +76,20 @@ $('.nav-dropdown').each(function() {
 });
 
 /*
+ * Touch dropdown
+ */
+$('.has-dd > a').on('touchstart', function(e) {
+	var $parent 		  = $(this).parent();
+	var navDDVisibleClass = 'nav-dropdown-visible';
+
+	if (!$parent.hasClass(navDDVisibleClass)) {
+		e.preventDefault();
+
+		$parent.addClass(navDDVisibleClass);
+	}
+});
+
+/*
  * Init scroll animator
  */
 new ScrollAnimator($('.animate'), {
