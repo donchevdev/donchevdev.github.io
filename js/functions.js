@@ -18,22 +18,34 @@ var $win      = $(window);
 var $services = $('.services');
 
 /*
+ * Move language navigation
+ */
+moveLanguageNavigation();
+
+/*
  * Window related events
  */
-$win.on('load resize', function() {
-	/*
-	 * Responsive slick slider for services
-	 */
-	if ($services.hasClass('slick-initialized') && $win.outerWidth() >= 768) {
-		$services.slick('unslick');
-	} else if (!$services.hasClass('slick-initialized') && $win.outerWidth() < 768) {
-		$('.services').slick({
-			dots    : true,
-			infinite: false,
-			arrows  : false
-		});
-	}
-});
+$win
+	.on('load resize', function() {
+		/*
+		 * Responsive slick slider for services
+		 */
+		if ($services.hasClass('slick-initialized') && $win.outerWidth() >= 768) {
+			$services.slick('unslick');
+		} else if (!$services.hasClass('slick-initialized') && $win.outerWidth() < 768) {
+			$('.services').slick({
+				dots    : true,
+				infinite: false,
+				arrows  : false
+			});
+		}
+	})
+	.on('resize', function() {
+		/*
+		 * Move language navigation
+		 */
+		moveLanguageNavigation();
+	});
 
 /*
  * Async styles
@@ -122,3 +134,18 @@ new ScrollAnimator($('.animate'), {
 		return $win.outerHeight() / 1.2;	
 	}
 });
+
+/*
+ * Move language navigation
+ */
+function moveLanguageNavigation() {
+	var $navLang 	 = $('.nav-lang');
+	var $headerInner = $('.header__inner');
+	var $logo        = $('.header__logo');
+
+	if (!$headerInner.find($navLang).length && $win.outerWidth() >= 1024) {
+		$headerInner.append($navLang);
+	} else if ($headerInner.find($navLang).length && $win.outerWidth() < 1024) {
+		$logo.after($navLang);
+	}
+}

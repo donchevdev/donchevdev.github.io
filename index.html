@@ -137,7 +137,7 @@
 
 			.header .nav { margin-right: 0; }
 			.header .search { padding-right: 0; margin: 0 0 10px; border: 0; }
-			.header .header__logo { padding: 12px 0 15px; }
+			.header .header__logo { flex: 0 0 115px; padding: 12px 0 15px; }
 			.header .header__inner { display: block; padding: 10px; }
 			
 			.header .header__group { position: absolute; display: block; width: 100%; height: calc(100vh - 60px); top: 100%; right: 0; overflow: hidden; pointer-events: none; }
@@ -162,7 +162,7 @@
 		\* ------------------------------------------------------------ */
 		
 		@media (max-width: 1023px) {
-			.nav-btn { display: block; width: 30px; align-self: center; margin-left: auto; font-size: 0; }
+			.nav-btn { display: block; width: 30px; align-self: center; font-size: 0; }
 			.nav-btn.nav--visible span:nth-child(1) { width: 100%; top: 9px; transform: rotate(45deg); transition: top .15s, transform .15s .15s; }
 			.nav-btn.nav--visible span:nth-child(2) { width: 100%; opacity: 0; }
 			.nav-btn.nav--visible span:nth-child(3) { top: -9px; transform: rotate(-45deg); transition: top .15s, transform .15s .15s; }
@@ -242,6 +242,10 @@
 		\* ------------------------------------------------------------ */
 
 		.nav-lang ul { display: none; }
+
+		@media (max-width: 1023px) {
+			.nav-lang { margin: auto 15px auto auto; }
+		}
 
 		/* ------------------------------------------------------------ *\
 			Intro
