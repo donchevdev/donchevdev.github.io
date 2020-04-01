@@ -94,8 +94,8 @@
 		.lazyload *:after { background-image: none !important; }
 
 		@media (max-width: 1023px) {
-			h1 { font-size: 38px; }
-			h2 { font-size: 32px; }
+			h1 { font-size: 34px; }
+			h2 { font-size: 30px; }
 		}
 
 		/* ------------------------------------------------------------ \
@@ -133,7 +133,7 @@
 
 		@media (max-width: 1023px) {
 			.header { position: fixed; background: rgba(25, 29, 44, 0.98); transition: background .3s; }
-			.header.nav-visible { background: #191d2c; }
+			.header.nav--visible { background: #191d2c; }
 
 			.header .nav { margin-right: 0; }
 			.header .search { padding-right: 0; margin: 0 0 10px; border: 0; }
@@ -148,8 +148,12 @@
 			.header .header__logo,
 			.header .header__logo:before { background: none; }
 
-			.header.nav-visible .header__group-inner,
-			.header.nav-visible .header__group:before { transform: translateX(0); }
+			.header.nav--visible .header__group-inner,
+			.header.nav--visible .header__group:before { transform: translate(0, 0); }
+		}
+
+		@media (max-width: 540px) {
+			.header .header__group-inner { width: 100%; padding: 0 20px; }
 		}
 
 		/* ------------------------------------------------------------ *\
@@ -158,190 +162,14 @@
 		
 		@media (max-width: 1023px) {
 			.nav-btn { display: block; width: 30px; align-self: center; margin-left: auto; font-size: 0; }
-			.nav-btn.nav-visible span:nth-child(1) { width: 100%; top: 9px; transform: rotate(45deg); transition: top .15s, transform .15s .15s; }
-			.nav-btn.nav-visible span:nth-child(2) { width: 100%; opacity: 0; }
-			.nav-btn.nav-visible span:nth-child(3) { top: -9px; transform: rotate(-45deg); transition: top .15s, transform .15s .15s; }
+			.nav-btn.nav--visible span:nth-child(1) { width: 100%; top: 9px; transform: rotate(45deg); transition: top .15s, transform .15s .15s; }
+			.nav-btn.nav--visible span:nth-child(2) { width: 100%; opacity: 0; }
+			.nav-btn.nav--visible span:nth-child(3) { top: -9px; transform: rotate(-45deg); transition: top .15s, transform .15s .15s; }
 			
 			.nav-btn span { position: relative; display: block; height: 2px; top: 0; margin-left: auto; border-radius: 2px; background: #1d8edd; transition: .15s; }
 			.nav-btn span:nth-child(1) { width: 23px; }
 			.nav-btn span:nth-child(2) { width: 18px; }
 			.nav-btn span + span { margin-top: 7px; }
-		}
-
-		/* ------------------------------------------------------------ \
-			Logos, Icons
-		\ ------------------------------------------------------------ */
-
-		.logo,
-		[class*="ico-"]:not(.before):not(.after),
-		.before[class*="ico-"]:before,
-		.after[class*="ico-"]:after { content: ''; display: inline-block; vertical-align: middle; background-size: contain; background-position: center center; background-repeat: no-repeat; }
-
-		.logo,
-		[class*="ico-"]:not(.before):not(.after) { font-size: 0; line-height: 0; text-indent: -4000px; }
-
-		.ico-search:not(.before):not(.after),
-		.ico-search.before:before,
-		.ico-search.after:after { width: 22px; height: 22px; background-image: url(/images/icons/ico-search.png); }
-
-		.ico-bg:not(.before):not(.after),
-		.ico-bg.before:before,
-		.ico-bg.after:after { width: 48px; height: 48px; background-image: url(/images/icons/ico-bg.png); }
-
-		.ico-drawing:not(.before):not(.after),
-		.ico-drawing.before:before,
-		.ico-drawing.after:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-drawing.png); }
-
-		.ico-building:not(.before):not(.after),
-		.ico-building.before:before,
-		.ico-building.after:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-building.png); }
-
-		.ico-design:not(.before):not(.after),
-		.ico-design.before:before,
-		.ico-design.after:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-design.png); }
-
-		.ico-repair:not(.before):not(.after),
-		.ico-repair.before:before,
-		.ico-repair.after:after { width: 60px; height: 60px; background-image: url(/images/icons/ico-repair.png); }
-
-		.ico-arrow-right:not(.before):not(.after),
-		.ico-arrow-right.before:before,
-		.ico-arrow-right.after:after { width: 13px; height: 9px; background-image: url(/images/icons/ico-arrow-right.png); }
-
-		.ico-building-mini:not(.before):not(.after),
-		.ico-building-mini.before:before,
-		.ico-building-mini.after:after { width: 14px; height: 14px; background-image: url(/images/icons/ico-building-mini.png); }
-
-		.ico-pin:not(.before):not(.after),
-		.ico-pin.before:before,
-		.ico-pin.after:after { width: 12px; height: 17px; background-image: url(/images/icons/ico-pin.png); }
-
-		.ico-phone:not(.before):not(.after),
-		.ico-phone.before:before,
-		.ico-phone.after:after { width: 12px; height: 12px; background-image: url(/images/icons/ico-phone.png); }
-
-		.ico-email:not(.before):not(.after),
-		.ico-email.before:before,
-		.ico-email.after:after { width: 16px; height: 11px; background-image: url(/images/icons/ico-email.png); }
-
-		.ico-globe:not(.before):not(.after),
-		.ico-globe.before:before,
-		.ico-globe.after:after { width: 16px; height: 15px; background-image: url(/images/icons/ico-globe.png); }
-
-		.ico-facebook:not(.before):not(.after),
-		.ico-facebook.before:before,
-		.ico-facebook.after:after { width: 22px; height: 22px; background-image: url(/images/icons/ico-facebook.png); }
-
-		.logo { width: 163px; height: 46px; background-image: url(/images/logo.png); }
-
-		@media (max-width: 1023px) {
-			.ico-nav-play:not(.before):not(.after),
-			.ico-nav-play.before:before,
-			.ico-nav-play.after:after { width: 12px; height: 16px; background-image: url(/images/icons/ico-nav-play.png); }
-
-			.ico-nav-group:not(.before):not(.after),
-			.ico-nav-group.before:before,
-			.ico-nav-group.after:after { width: 21px; height: 12px; background-image: url(/images/icons/ico-nav-group.png); }
-
-			.ico-nav-dashboard:not(.before):not(.after),
-			.ico-nav-dashboard.before:before,
-			.ico-nav-dashboard.after:after { width: 18px; height: 17px; background-image: url(/images/icons/ico-nav-dashboard.png); }
-
-			.ico-nav-house:not(.before):not(.after),
-			.ico-nav-house.before:before,
-			.ico-nav-house.after:after { width: 17px; height: 16px; background-image: url(/images/icons/ico-nav-house.png); }
-
-			.ico-nav-chatbox:not(.before):not(.after),
-			.ico-nav-chatbox.before:before,
-			.ico-nav-chatbox.after:after { width: 21px; height: 19px; background-image: url(/images/icons/ico-nav-chatbox.png); }
-
-			.ico-nav-envelope:not(.before):not(.after),
-			.ico-nav-envelope.before:before,
-			.ico-nav-envelope.after:after { width: 20px; height: 15px; background-image: url(/images/icons/ico-nav-envelope.png); }
-
-			.logo { width: 115px; height: 33px; }
-		}
-
-		/* Retina Display */
-
-		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
-			.ico-search:not(.before):not(.after),
-			.ico-search.before:before,
-			.ico-search.after:after { background-image: url(/images/icons/ico-search@2x.png); }
-
-			.ico-bg:not(.before):not(.after),
-			.ico-bg.before:before,
-			.ico-bg.after:after { background-image: url(/images/icons/ico-bg@2x.png); }
-
-			.ico-drawing:not(.before):not(.after),
-			.ico-drawing.before:before,
-			.ico-drawing.after:after { background-image: url(/images/icons/ico-drawing@2x.png); }
-
-			.ico-building:not(.before):not(.after),
-			.ico-building.before:before,
-			.ico-building.after:after { background-image: url(/images/icons/ico-building@2x.png); }
-
-			.ico-design:not(.before):not(.after),
-			.ico-design.before:before,
-			.ico-design.after:after { background-image: url(/images/icons/ico-design@2x.png); }
-
-			.ico-repair:not(.before):not(.after),
-			.ico-repair.before:before,
-			.ico-repair.after:after { background-image: url(/images/icons/ico-repair@2x.png); }
-
-			.ico-arrow-right:not(.before):not(.after),
-			.ico-arrow-right.before:before,
-			.ico-arrow-right.after:after { background-image: url(/images/icons/ico-arrow-right@2x.png); }
-
-			.ico-building-mini:not(.before):not(.after),
-			.ico-building-mini.before:before,
-			.ico-building-mini.after:after { background-image: url(/images/icons/ico-building-mini@2x.png); }
-
-			.ico-pin:not(.before):not(.after),
-			.ico-pin.before:before,
-			.ico-pin.after:after { background-image: url(/images/icons/ico-pin@2x.png); }
-
-			.ico-phone:not(.before):not(.after),
-			.ico-phone.before:before,
-			.ico-phone.after:after { background-image: url(/images/icons/ico-phone@2x.png); }
-
-			.ico-email:not(.before):not(.after),
-			.ico-email.before:before,
-			.ico-email.after:after { background-image: url(/images/icons/ico-email@2x.png); }
-
-			.ico-globe:not(.before):not(.after),
-			.ico-globe.before:before,
-			.ico-globe.after:after { background-image: url(/images/icons/ico-globe@2x.png); }
-
-			.ico-facebook:not(.before):not(.after),
-			.ico-facebook.before:before,
-			.ico-facebook.after:after { background-image: url(/images/icons/ico-facebook@2x.png); }
-
-			.ico-nav-play:not(.before):not(.after),
-			.ico-nav-play.before:before,
-			.ico-nav-play.after:after { background-image: url(/images/icons/ico-nav-play@2x.png); }
-
-			.ico-nav-group:not(.before):not(.after),
-			.ico-nav-group.before:before,
-			.ico-nav-group.after:after { background-image: url(/images/icons/ico-nav-group@2x.png); }
-
-			.ico-nav-dashboard:not(.before):not(.after),
-			.ico-nav-dashboard.before:before,
-			.ico-nav-dashboard.after:after { background-image: url(/images/icons/ico-nav-dashboard@2x.png); }
-
-			.ico-nav-house:not(.before):not(.after),
-			.ico-nav-house.before:before,
-			.ico-nav-house.after:after { background-image: url(/images/icons/ico-nav-house@2x.png); }
-
-			.ico-nav-chatbox:not(.before):not(.after),
-			.ico-nav-chatbox.before:before,
-			.ico-nav-chatbox.after:after { background-image: url(/images/icons/ico-nav-chatbox@2x.png); }
-
-			.ico-nav-envelope:not(.before):not(.after),
-			.ico-nav-envelope.before:before,
-			.ico-nav-envelope.after:after { background-image: url(/images/icons/ico-nav-envelope@2x.png); }
-
-		  	.logo { background-image: url(/images/logo@2x.png); }
 		}
 
 		/* ------------------------------------------------------------ \
@@ -371,7 +199,7 @@
 			.nav a:before { position: absolute; top: 50%; left: 20px; transform: translate(-50%, -50%); }
 			
 			.nav .has-dd > a:after { content: ''; position: absolute; width: 10px; height: 10px; top: 50%; right: 10px; margin-top: -7px; border-width: 1px 1px 0 0; border-style: solid; border-color: #fff; transform: rotate(135deg); }
-			.nav .nav-dropdown-visible .nav-dropdown { max-height: 500px; }
+			.nav .nav-dropdown--visible .nav-dropdown { max-height: 500px; }
 		}
 
 		/* ------------------------------------------------------------ *\
@@ -447,11 +275,22 @@
 			.intro .intro__content h1 { padding-right: 0; }
 		}
 
+		@media (max-width: 767px) {
+			.intro { padding-top: 335px; margin-bottom: 40px; }
+			.intro:before { width: 100%; height: auto; bottom: 0; padding-top: 68.32%; background-size: contain; }
+
+			.intro .intro__content { padding-top: 0; }
+		}
+
+		@media (max-width: 450px) {
+			.intro { padding-top: 75%; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Btn
 		\* ------------------------------------------------------------ */
 
-		.btn { position: relative; display: inline-block; top: 0; padding: 12px 18px; border-radius: 4px; box-shadow: 0 4px 0 #0062a5; vertical-align: middle; font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; text-align: center; appearance: none; transition: top .15s, box-shadow .15s;  
+		.btn { position: relative; display: inline-block; top: 0; padding: 12px 18px; border-radius: 4px; box-shadow: 0 4px 0 #0062a5; vertical-align: middle; font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; text-align: center; appearance: none; cursor: pointer; transition: top .15s, box-shadow .15s;  
 			background: #47b1fb;
 			background: -moz-linear-gradient(top, #47b1fb 0%, #0076c8 100%);
 			background: -webkit-linear-gradient(top, #47b1fb 0%,#0076c8 100%);
@@ -463,14 +302,18 @@
 		.btn span { position: relative; padding: 0 30px; }
 		.btn span:before { position: absolute; top: 50%; right: 0; margin-top: -3px; transform: translateX(-7px); opacity: 0; visibility: hidden; transition: transform .15s, opacity .15s, visibility .15s; }
 
+		/*  Modifier: Btn Block */
+
+		.btn--block { display: block; }
+
 		/*  Modifier: Btn Transparent */
 
-		.btn--transparent { padding-top: 10px; padding-bottom: 10px; border: 1px solid #1d8edd; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #1d8edd; background: none; transition: color .15s, background .15s; }
+		.btn--transparent { position: static; padding-top: 10px; padding-bottom: 10px; border: 1px solid #1d8edd; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #1d8edd; background: none; transition: color .15s, background .15s; }
 		.btn--transparent:hover { color: #fff; background: #1d8edd; }
 
 		/*  Modifier: Btn White Transparent */
 
-		.btn--transparent-white { padding-top: 10px; padding-bottom: 10px; border: 1px solid #fff; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #fff; background: none; transition: color .15s, background .15s; }
+		.btn--transparent-white { position: static; padding-top: 10px; padding-bottom: 10px; border: 1px solid #fff; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #fff; background: none; transition: color .15s, background .15s; }
 		.btn--transparent-white:hover { color: #fff; background: #1d8edd; }
 
 		/*  Modifier: Btn XS */
@@ -508,7 +351,15 @@
 			.col-sm--1of2 { max-width: 50%; flex: 0 0 50%; }
 		}
 
+		@media (max-width: 767px) {
+			.col-xs--1of2 { max-width: 50%; flex: 0 0 50%; }
+		}
+
 		/* Responsive visibility */
+
+		@media (min-width: 541px) {
+			.visible-xxs { display: none !important; }
+		}
 
 		@media (min-width: 1024px) {
 			.visible-sm { display: none !important; }
@@ -516,6 +367,10 @@
 
 		@media (max-width: 1023px) {
 			.hidden-sm { display: none !important; }
+		}
+
+		@media (max-width: 767px) {
+			.hidden-xs { display: none !important; }
 		}
 
 		/* BG Dark */
@@ -556,6 +411,10 @@
 			.section { margin-bottom: 30px; }
 		}
 
+		@media (max-width: 767px) {
+			.section h2 { margin-bottom: 30px; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Services
 		\* ------------------------------------------------------------ */
@@ -574,6 +433,140 @@
 
 		@media (max-width: 1240px) {
 			.services .service { margin-bottom: 20px; }
+		}
+
+		@media (max-width: 767px) {
+			.services .slick-list { padding: 0 20px; overflow: visible; }
+			
+			.services .slick-dots { display: flex; justify-content: center; }
+			.services .slick-dots li { width: 8px; height: 8px; flex: 0 0 8px; margin: 0 6px; border-radius: 50%; background: #dee0e6; transition: box-shadow .15s, background .15s; }
+			.services .slick-dots .slick-active { box-shadow: 0 0 0 3px #1d8edd; background: #1d8edd; }
+			.services .slick-dots button { display: none; }
+
+			.service .service__title { font-size: 18px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Slick
+		\* ------------------------------------------------------------ */
+		
+		.slick-slider
+		{
+		    position: relative;
+
+		    display: block;
+		    box-sizing: border-box;
+
+		    -webkit-user-select: none;
+		       -moz-user-select: none;
+		        -ms-user-select: none;
+		            user-select: none;
+
+		    -webkit-touch-callout: none;
+		    -khtml-user-select: none;
+		    -ms-touch-action: pan-y;
+		        touch-action: pan-y;
+		    -webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list
+		{
+		    position: relative;
+
+		    display: block;
+		    overflow: hidden;
+
+		    margin: 0;
+		    padding: 0;
+		}
+		.slick-list:focus
+		{
+		    outline: none;
+		}
+		.slick-list.dragging
+		{
+		    cursor: pointer;
+		    cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+		    -webkit-transform: translate3d(0, 0, 0);
+		       -moz-transform: translate3d(0, 0, 0);
+		        -ms-transform: translate3d(0, 0, 0);
+		         -o-transform: translate3d(0, 0, 0);
+		            transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track
+		{
+		    position: relative;
+		    top: 0;
+		    left: 0;
+
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+		    display: table;
+
+		    content: '';
+		}
+		.slick-track:after
+		{
+		    clear: both;
+		}
+		.slick-loading .slick-track
+		{
+		    visibility: hidden;
+		}
+
+		.slick-slide
+		{
+		    display: none;
+		    float: left;
+
+		    height: 100%;
+		    min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+		    float: right;
+		}
+		.slick-slide img
+		{
+		    display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+		    display: none;
+		}
+		.slick-slide.dragging img
+		{
+		    pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+		    display: block;
+		}
+		.slick-loading .slick-slide
+		{
+		    visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+		    display: block;
+
+		    height: auto;
+
+		    border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+		    display: none;
 		}
 	</style>
 
@@ -653,7 +646,7 @@
 				</div>
 			</div>
 
-			<div class="nav-btn visible-sm js-toggle" data-target=".header" data-class="nav-visible" data-autoclose>
+			<div class="nav-btn visible-sm js-toggle" data-target=".header" data-class="nav--visible" data-autoclose>
 				<span>Toggle navigation</span>
 
 				<span></span>
@@ -747,7 +740,7 @@
 				<h2>Имоти за продан без посредник</h2>
 
 				<div class="properties cols">
-					<div class="property col-lg--1of4">
+					<div class="property col-lg--1of4 col-xs--1of2">
 						<div class="property__inner">
 							<a href="#">
 								<div class="property__image">
@@ -755,7 +748,7 @@
 								</div>
 							
 								<div class="property__container">
-									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4 86,19 М2</div>
 															
 									<div class="property__price">59 900 €</div>
 															
@@ -767,7 +760,7 @@
 						</div>
 					</div>
 
-					<div class="property col-lg--1of4">
+					<div class="property col-lg--1of4 col-xs--1of2">
 						<div class="property__inner">
 							<a href="#">
 								<div class="property__image">
@@ -775,7 +768,7 @@
 								</div>
 							
 								<div class="property__container">
-									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4 86,19 М2</div>
 															
 									<div class="property__price">59 900 €</div>
 															
@@ -787,7 +780,7 @@
 						</div>
 					</div>
 
-					<div class="property col-lg--1of4">
+					<div class="property col-lg--1of4 col-xs--1of2">
 						<div class="property__inner">
 							<a href="#">
 								<div class="property__image">
@@ -795,7 +788,7 @@
 								</div>
 							
 								<div class="property__container">
-									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4 86,19 М2</div>
 															
 									<div class="property__price">59 900 €</div>
 															
@@ -807,7 +800,7 @@
 						</div>
 					</div>
 
-					<div class="property col-lg--1of4">
+					<div class="property col-lg--1of4 col-xs--1of2">
 						<div class="property__inner">
 							<a href="#">
 								<div class="property__image">
@@ -815,7 +808,7 @@
 								</div>
 							
 								<div class="property__container">
-									<div class="property__title">Двустаен Апартамент №6 ЕТ.4  86,19 М2</div>
+									<div class="property__title">Двустаен Апартамент №6 ЕТ.4 86,19 М2</div>
 															
 									<div class="property__price">59 900 €</div>
 															
@@ -847,7 +840,7 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
@@ -863,7 +856,7 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
@@ -879,7 +872,7 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
@@ -895,7 +888,7 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
@@ -911,7 +904,7 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
@@ -927,13 +920,15 @@
 								<div class="project__inner">
 									<div class="project__title">Жилищна Кооперация <span>ул. Детелина N11</span></div>
 								
-									<div class="project__entry">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
+									<div class="project__entry hidden-xs">5-етажна модерна жилищна кооперация. Сградата се намира в Цветен Квартал гр.Варна – топ локация.</div>
 								
 									<div class="project__actions"><span class="btn btn--transparent-white btn--xs ico-arrow-right after">Разгледай</span></div>
 								</div>
 							</div>
 						</a>
 					</div>
+
+					<div class="projects__more visible-xxs js-toggle" data-target=".projects" data-class="projects--expanded"><span class="btn btn--transparent btn--block ico-arrow-down after">Покажи Още</span></div>
 				</div>
 			</div>
 		</section>
