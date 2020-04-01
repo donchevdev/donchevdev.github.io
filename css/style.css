@@ -235,7 +235,7 @@
 .list-checks li:before { content: ''; position: absolute; width: 32px; height: 32px; top: 50%; left: 0; margin-top: -16px; background: url(../images/check-icon.png) no-repeat 0 0 / 100% 100%; }
 .list-checks li:nth-last-child(-n+2) { margin-bottom: 0; }
 
-@media (max-width: 1240px) {
+@media (max-width: 1239px) {
 	.list-checks li { flex: 0 0 45%; }
 }
 
