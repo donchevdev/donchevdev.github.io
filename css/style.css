@@ -392,5 +392,5 @@
 	.footer .footer__col:after { display: none; }
 
 	.footer .footer__col:nth-child(3),
-	.footer .footer__col:nth-child(4) { padding-bottom: 0; border-bottom: 0; }
+	.footer .footer__col:nth-child(4) { padding-bottom: 0; border-bottom: 0; border-top-color: #16181c; }
 }
