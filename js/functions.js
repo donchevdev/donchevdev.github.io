@@ -16,6 +16,8 @@ function _instanceof(e,t){return null!=t&&"undefined"!=typeof Symbol&&t[Symbol.h
 var $doc      = $(document);
 var $win      = $(window);
 var $services = $('.services');
+var $offset   = $('.js-static-header');
+var $header   = $('.header');
 
 /*
  * Move language navigation
@@ -43,6 +45,13 @@ $win
 				infinite: false,
 				arrows  : false
 			});
+		}
+
+		/*
+		 * Offset header when intro is static
+		 */
+		if ($offset.length) {
+			$offset.css('paddingTop', $header.outerHeight());
 		}
 	})
 	.on('resize', function() {

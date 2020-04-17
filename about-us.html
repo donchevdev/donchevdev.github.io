@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Дончев Комерс</title>
+
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+	<style>
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline }
+		:focus { outline: 0 }
+		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+		body { line-height: 1 }
+		ol, ul { list-style: none }
+		blockquote, q { quotes: none }
+		blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none }
+		table { border-collapse: collapse; border-spacing: 0 }
+		input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration { -webkit-appearance: none; -moz-appearance: none }
+		input[type=search] { -webkit-appearance: none; -moz-appearance: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box }
+		textarea { overflow: auto; vertical-align: top; resize: vertical }
+		audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; max-width: 100% }
+		audio:not([controls]) { display: none; height: 0 }
+		[hidden] { display: none }
+		html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+		a:focus { outline: thin dotted }
+		a:active, a:hover { outline: 0 }
+		img { border: 0; -ms-interpolation-mode: bicubic }
+		figure { margin: 0 }
+		form { margin: 0 }
+		fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em }
+		legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px }
+		button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle }
+		button, input { line-height: normal }
+		button, select { text-transform: none }
+		button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; *overflow: visible }
+		button[disabled], html input[disabled] { cursor: default }
+		input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px }
+		input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box }
+		input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none }
+		button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0 }
+		textarea { overflow: auto; vertical-align: top }
+		table { border-collapse: collapse; border-spacing: 0 }
+		html, button, input, select, textarea { color: #222 }
+		::-moz-selection { background: #b3d4fc; text-shadow: none }
+		::selection { background: #b3d4fc; text-shadow: none }
+		img { vertical-align: middle }
+		fieldset { border: 0; margin: 0; padding: 0 }
+		textarea { resize: vertical }
+		input::-webkit-input-placeholder { opacity: 1 !important; color: inherit !important; }
+		input::-moz-placeholder { opacity: 1 !important; color: inherit !important; }
+		input:-moz-placeholder { opacity: 1 !important; color: inherit !important; }
+		input:-ms-input-placeholder { opacity: 1 !important; color: inherit !important; }
+		.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0 }
+
+		/* ------------------------------------------------------------ *\
+			Fonts
+		\* ------------------------------------------------------------ */
+
+		@font-face {
+		    font-family: 'Averta Demo PE';
+		    src: url('../fonts/AvertaDemoPE-ExtraBold.woff2') format('woff2'),
+		         url('../fonts/AvertaDemoPE-ExtraBold.woff') format('woff');
+		    font-weight: 800;
+		    font-style: italic;
+		    font-display: swap;
+		}
+
+		/* ------------------------------------------------------------ \
+			Base
+		\ ------------------------------------------------------------ */
+
+		*,
+		*:before,
+		*:after { box-sizing: border-box; }
+
+		body { min-width: 320px; font-family: 'Source Sans Pro', sans-serif; font-size: 16px; line-height: 1.25; color: #4b536e; }
+
+		a { color: inherit; }
+		a:hover { text-decoration: none; }
+
+		img { max-width: 100%; height: auto; }
+
+		h1 { font-size: 56px; line-height: 1.04; }
+		h2 { font-size: 42px; line-height: 1; }
+
+		h1,
+		h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
+
+		.lazyload:before,
+		.lazyload:after,
+		.lazyload *,
+		.lazyload *:before,
+		.lazyload *:after { background-image: none !important; }
+
+		@media (max-width: 1023px) {
+			h1 { font-size: 34px; }
+			h2 { font-size: 30px; }
+		}
+
+		/* ------------------------------------------------------------ \
+			Wrapper
+		\ ------------------------------------------------------------ */
+
+		.wrapper { position: relative; min-height: 100vh; overflow: hidden; }
+
+		/* ------------------------------------------------------------ \
+			Container
+		\ ------------------------------------------------------------ */
+
+		.container { max-width: 1240px; padding: 0 20px; margin: 0 auto; }
+
+		/* ------------------------------------------------------------ \
+			Header
+		\ ------------------------------------------------------------ */
+
+		.header { position: absolute; width: 100%; top: 0; left: 0; background: rgba(255, 255, 255, 0.8); z-index: 5; }
+
+		.header .nav { flex: 0 1 100%; margin-right: 65px; }
+		.header .search { padding-right: 22px; margin-right: 22px; border-right: 1px solid #b9b9b9; }
+		.header .container { display: flex; }
+		.header .header__group { display: flex; flex: 0 1 100%; }
+		.header .header__group-inner { display: flex; flex: 0 1 100%; justify-content: space-between; align-items: center; }
+
+		.header .header__inner { display: flex; flex: 0 0 120px; align-items: center; }
+
+		.header .header__logo { position: relative; flex: 0 0 190px; padding: 17px 10px 30px; margin-right: 40px; border-radius: 0 0 20px 0; background: #272a35; }
+		.header .header__logo:before { content: ''; position: absolute; width: 100vw; height: 100%; top: 0; right: 100%; background: #272a35; }
+
+		@media (max-width: 1239px) {
+			.header .nav { margin-right: 20px; }
+		}
+
+		@media (max-width: 1023px) {
+			.header { position: fixed; background: rgba(25, 29, 44, 0.98); transition: background .3s; }
+			.header.nav--visible { background: #191d2c; }
+
+			.header .nav { margin-right: 0; }
+			.header .search { padding-right: 0; margin: 0 0 10px; border: 0; }
+			.header .header__logo { flex: 0 0 115px; padding: 12px 0 15px; }
+			.header .header__inner { display: block; padding: 10px; }
+			
+			.header .header__group { position: absolute; display: block; width: 100%; height: calc(100vh - 60px); top: 100%; right: 0; overflow: hidden; pointer-events: none; }
+			.header .header__group:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; transform: translateX(100%); background: rgba(0, 0, 0, 0.7); transition: transform .3s; }
+			.header .header__group > * { pointer-events: initial; }
+			.header .header__group-inner { display: block; width: 250px; height: 100%; margin-left: auto; transform: translateX(100%); overflow-x: hidden; overflow-y: auto; background: rgba(25, 29, 44, 0.98); transition: transform .3s; z-index: 2; }
+
+			.header .header__logo,
+			.header .header__logo:before { background: none; }
+
+			.header.nav--visible .header__group-inner,
+			.header.nav--visible .header__group:before { transform: translate(0, 0); }
+		}
+
+		@media (max-width: 539px) {
+			.header .header__inner { padding-right: 0; padding-left: 0; }
+			.header .header__group-inner { width: 100%; padding: 0 20px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Nav Btn
+		\* ------------------------------------------------------------ */
+		
+		@media (max-width: 1023px) {
+			.nav-btn { display: block; width: 30px; align-self: center; font-size: 0; }
+			.nav-btn.nav--visible span:nth-child(1) { width: 100%; top: 9px; transform: rotate(45deg); transition: top .15s, transform .15s .15s; }
+			.nav-btn.nav--visible span:nth-child(2) { width: 100%; opacity: 0; }
+			.nav-btn.nav--visible span:nth-child(3) { top: -9px; transform: rotate(-45deg); transition: top .15s, transform .15s .15s; }
+			
+			.nav-btn span { position: relative; display: block; height: 2px; top: 0; margin-left: auto; border-radius: 2px; background: #1d8edd; transition: .15s; }
+			.nav-btn span:nth-child(1) { width: 23px; }
+			.nav-btn span:nth-child(2) { width: 18px; }
+			.nav-btn span + span { margin-top: 7px; }
+		}
+
+		/* ------------------------------------------------------------ \
+			Nav
+		\ ------------------------------------------------------------ */
+		
+		@media (min-width: 1024px) {
+			.nav > ul { display: flex; }
+			.nav > ul > li { position: relative; margin: 0 10px; }
+			.nav > ul > li > a { position: relative; display: inline-block; padding: 8px 10px; vertical-align: middle; font-size: 18px; font-weight: 700; color: #151c33; text-transform: uppercase; text-decoration: none; }
+			.nav > ul > .has-dd > a:after { content: ''; position: relative; display: inline-block; width: 9px; height: 9px; top: -4px; margin-left: 7px; vertical-align: middle; border-width: 1px 1px 0 0; border-style: solid; border-color: #151c33; transform: rotate(135deg); }
+			.nav > ul > li > a:before { content: ''; position: absolute; width: 0; height: 3px; left: 50%; bottom: 0; transform: translateX(0); background: #1d8edd; transition: width .15s, transform .15s; }
+			.nav > ul > li:after { content: ''; position: absolute; width: 100%; height: 27px; top: 100%; left: 0; opacity: 0; visibility: hidden; transition: opacity .15s, visibility .15s; }
+			.nav > ul > li:hover:after { opacity: 1; visibility: visible; }
+			.nav > ul > li:hover > a:before { width: 60%; transform: translateX(-50%); }
+			.nav > ul > li:hover > .nav-dropdown { transform: translateY(0); opacity: 1; visibility: visible; }
+
+			@media (max-width: 1239px) {
+				.nav > ul > li { margin: 0 5px; }
+				.nav > ul > li > a { font-size: 15px; }
+			}
+		}
+
+		@media (max-width: 1023px) {
+			.nav li { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+			.nav a { position: relative; display: block; padding: 15px 30px 15px 40px; font-size: 18px; color: #fff; text-decoration: none; }
+			.nav a:before { position: absolute; top: 50%; left: 20px; transform: translate(-50%, -50%); }
+			
+			.nav .has-dd > a:after { content: ''; position: absolute; width: 10px; height: 10px; top: 50%; right: 10px; margin-top: -7px; border-width: 1px 1px 0 0; border-style: solid; border-color: #fff; transform: rotate(135deg); }
+			.nav .nav-dropdown--visible .nav-dropdown { max-height: 500px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Nav Dropdown
+		\* ------------------------------------------------------------ */
+
+		@media (min-width: 1024px) {
+			.nav-dropdown { position: absolute; width: 282px; top: 100%; left: 50%; padding: 0 20px; margin: 27px 0 0 -141px; border-radius: 0 0 4px 4px; transform: translateY(10px); opacity: 0; visibility: hidden; box-shadow: 0px 8px 13px 0px rgba(36, 45, 75, 0.42); font-size: 14px; color: #828fbb; text-align: center; background: #272a35; transition: transform .15s, opacity .15s, visibility .15s; }
+
+			.nav-dropdown li { position: relative; }
+			.nav-dropdown li + li { border-top: 1px solid #3d4255; }
+			.nav-dropdown li + li:before { content: ''; position: absolute; width: 100%; height: 1px; top: 1px; left: 0; background: #191b22; }
+			.nav-dropdown a { display: block; padding: 22px 10px; text-decoration: none; transition: color .15s; }
+			.nav-dropdown a:hover { color: #1d8edd; }
+		}
+
+		@media (max-width: 1023px) {
+			.nav-dropdown { max-height: 0; overflow: hidden; background: rgba(255, 255, 255, 0.1); transition: max-height .3s; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			JS Toggle
+		\* ------------------------------------------------------------ */
+
+		.js-toggle { cursor: pointer; }
+
+		/* ------------------------------------------------------------ *\
+			Search
+		\* ------------------------------------------------------------ */
+
+		.search input { display: none; }
+
+		@media (max-width: 1023px) {
+			.search input { display: block; width: 100%; height: 55px; padding: 0 20px 0 40px; border: 0; border-radius: 55px; font-size: 18px; font-weight: 400; color: rgba(255, 255, 255, .5); background: rgba(255, 255, 255, 0.1) url(images/search-mobile.png) no-repeat 15px center / 16px 16px; appearance: none; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Nav Lang
+		\* ------------------------------------------------------------ */
+
+		.nav-lang ul { display: none; }
+
+		@media (max-width: 1023px) {
+			.nav-lang { margin: auto 15px auto auto; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Intro
+		\* ------------------------------------------------------------ */
+
+		.intro { position: relative; padding: 150px 0 70px; margin-bottom: 80px; font-size: 16px; line-height: 1.63; color: #4b536e; }
+		.intro:before { content: ''; position: absolute; width: 704px; height: 481px; bottom: -310px; left: 0; background: url(/images/intro-pattern.png) no-repeat 0 0; pointer-events: none; }
+
+		.intro p { margin-bottom: 45px; }
+
+		.intro .intro__content { position: relative; width: 49.17%; z-index: 2; }
+
+		.intro .intro__image { position: absolute; display: flex; align-items: center; max-width: 50%; top: 0; right: 0; overflow: hidden; }
+		.intro .intro__image:before { content: ''; position: absolute; width: 200%; height: 200%; border-radius: 70px; bottom: 0; left: 21%; box-shadow: 0 0 0 300px #fff; transform: rotate(-12deg); transform-origin: 0 100%; z-index: 2; }
+		.intro .intro__image img { position: absolute; display: block; width: 100%; top: 50%; left: 0; transform: translateY(-50%); opacity: 0; visibility: hidden; transition: opacity .7s, visibility .7s; }
+		.intro .intro__image .active { position: static; top: 0; left: 0; transform: translateY(0); opacity: 1; visibility: visible; }
+
+		@media (max-width: 1239px) {
+			.intro { padding-bottom: 0; }
+
+			.intro .intro__image { max-height: 330px; }
+
+			.intro .intro__content { width: 100%; padding-top: 50px; }
+			.intro .intro__content h1 { padding-right: 45%; }
+		}
+
+		@media (max-width: 1023px) {
+			.intro p { margin-bottom: 25px; }
+
+			.intro .intro__image { max-width: none; width: 115%; }
+			.intro .intro__image img { display: block; width: 100%; }
+			
+			.intro .intro__content { padding-top: 185px; text-align: center; }
+			.intro .intro__content h1 { padding-right: 0; }
+		}
+
+		@media (max-width: 767px) {
+			.intro { padding-top: 335px; margin-bottom: 40px; }
+			.intro:before { width: 100%; height: auto; bottom: 0; padding-top: 68.32%; background-size: contain; }
+
+			.intro .intro__content { padding-top: 0; }
+		}
+
+		@media (max-width: 450px) {
+			.intro { padding-top: 75%; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Btn
+		\* ------------------------------------------------------------ */
+
+		.btn { position: relative; display: inline-block; top: 0; padding: 12px 18px; border-radius: 4px; box-shadow: 0 4px 0 #0062a5; vertical-align: middle; font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; text-align: center; appearance: none; cursor: pointer; transition: top .15s, box-shadow .15s;  
+			background: #47b1fb;
+			background: -moz-linear-gradient(top, #47b1fb 0%, #0076c8 100%);
+			background: -webkit-linear-gradient(top, #47b1fb 0%,#0076c8 100%);
+			background: linear-gradient(to bottom, #47b1fb 0%,#0076c8 100%);
+		}
+		.btn:hover { top: 4px; box-shadow: none; background: #0062a6; }
+		.btn:hover span:before { transform: translateX(0); opacity: 1; visibility: visible; }
+
+		.btn span { position: relative; padding: 0 30px; }
+		.btn span:before { position: absolute; top: 50%; right: 0; margin-top: -3px; transform: translateX(-7px); opacity: 0; visibility: hidden; transition: transform .15s, opacity .15s, visibility .15s; }
+
+		/*  Modifier: Btn Block */
+
+		.btn--block { display: block; }
+
+		/*  Modifier: Btn Transparent */
+
+		.btn--transparent { position: static; padding-top: 10px; padding-bottom: 10px; border: 1px solid #1d8edd; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #1d8edd; background: none; transition: color .15s, background .15s; }
+		.btn--transparent:hover { color: #fff; background: #1d8edd; }
+
+		/*  Modifier: Btn White Transparent */
+
+		.btn--transparent-white { position: static; padding-top: 10px; padding-bottom: 10px; border: 1px solid #fff; border-radius: 4px; box-shadow: none; font-size: 16px; font-weight: 700; color: #fff; background: none; transition: color .15s, background .15s; }
+		.btn--transparent-white:hover { color: #fff; background: #1d8edd; }
+
+		/*  Modifier: Btn XS */
+
+		.btn--xs { min-width: 150px; }
+
+		/*  Modifier: Btn MD */
+
+		.btn--md { min-width: 280px; }
+
+		/* Retina Display */
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+			.btn:hover span { background-image: url(/images/btn-arrow-right@2x.png); }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Helpers
+		\* ------------------------------------------------------------ */
+	
+		/* Columns */
+
+		.cols { display: flex; flex-flow: row wrap; margin: 0 -10px; }
+
+		[class*="col-"] { flex: 1 1 100%; padding: 0 10px; }
+
+		.col-xxs--1of2 { max-width: 50%; flex: 0 0 50%; }
+
+		@media (min-width: 540px) {
+			.col-xs--1of2 { max-width: 50%; flex: 0 0 50%; }
+		}
+
+		@media (min-width: 768px) {
+			.col-sm--1of2 { max-width: 50%; flex: 0 0 50%; }
+			.col-sm--1of4 { max-width: 25%; flex: 0 0 25%; }
+		}
+
+		@media (min-width: 1024px) {
+			.col-md--1of3 { max-width: 33.3%; flex: 0 0 33.3%; }
+			.col-md--1of4 { max-width: 25%; flex: 0 0 25%; }
+		}
+
+		@media (min-width: 1240px) {
+			.col-lg--1of4 { max-width: 25%; flex: 0 0 25%; }
+		}
+		
+		/* Responsive visibility */
+
+		@media (min-width: 540px) {
+			.visible-xxs { display: none !important; }
+		}
+
+		@media (min-width: 1024px) {
+			.visible-sm { display: none !important; }
+		}
+
+		@media (max-width: 1023px) {
+			.hidden-sm { display: none !important; }
+		}
+
+		@media (max-width: 767px) {
+			.hidden-xs { display: none !important; }
+		}
+
+		/* BG Dark */
+
+		.bg-dark { color: #fff; 
+			background: rgb(39,42,53);
+			background: -moz-linear-gradient(left, rgba(39,42,53,1) 0%, rgba(55,59,72,1) 100%);
+			background: -webkit-linear-gradient(left, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
+			background: linear-gradient(to right, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
+		}
+		.bg-dark h2 { color: #fff; }
+
+		/* ------------------------------------------------------------ *\
+			Animations
+		\* ------------------------------------------------------------ */
+
+		[class*="fade"] { opacity: 0; visibility: hidden; transition: transform .3s, opacity .3s, visibility .3s; }
+
+		.fade-top { transform: translateY(-60px); }
+		.fade-left { transform: translateX(-60px); }
+		.fade-right { transform: translateX(60px); }
+
+		.animated [class*="fade"],
+		.animated[class*="fade"] { opacity: 1; visibility: visible; }
+
+		.animated [class*="fade-"],
+		.animated[class*="fade-"] { transform: translate(0, 0); }
+
+		/* ------------------------------------------------------------ *\
+			Section
+		\* ------------------------------------------------------------ */
+
+		.section { position: relative; margin-bottom: 80px; z-index: 2; }
+
+		.section h2 { text-align: center; margin-bottom: 45px; }
+
+		@media (max-width: 1023px) {
+			.section { margin-bottom: 30px; }
+		}
+
+		@media (max-width: 767px) {
+			.section h2 { margin-bottom: 30px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Services
+		\* ------------------------------------------------------------ */
+
+		.service { display: flex; }
+
+		.services .service:nth-child(2) { transition-delay: .05s; }
+		.services .service:nth-child(3) { transition-delay: .1s; }
+		.services .service:nth-child(4) { transition-delay: .15s; }
+		.services.animated .service { transform: translateY(0); opacity: 1; visibility: visible; }
+
+		.service .service__title { margin-bottom: 18px; font-family: 'Averta Demo PE'; font-size: 20px; font-weight: 800; font-style: italic; color: #151c33; }
+
+		.service .service__inner { max-width: 100%; flex: 0 0 100%; padding: 20px 22px 25px; border-radius: 4px; box-shadow: 0px 0px 29px 0px rgba(30, 43, 85, 0.35); text-align: center; background: #fff; }
+		.service .service__inner:before { margin-bottom: 10px; }
+
+		@media (max-width: 1239px) {
+			.services .service { margin-bottom: 20px; }
+		}
+
+		@media (max-width: 767px) {
+			.services .slick-list { padding: 0 20px; overflow: visible; }
+			
+			.services .slick-dots { display: flex; justify-content: center; }
+			.services .slick-dots li { width: 8px; height: 8px; flex: 0 0 8px; margin: 0 6px; border-radius: 50%; background: #dee0e6; transition: box-shadow .15s, background .15s; }
+			.services .slick-dots .slick-active { box-shadow: 0 0 0 3px #1d8edd; background: #1d8edd; }
+			.services .slick-dots button { display: none; }
+
+			.service .service__title { font-size: 18px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Slick
+		\* ------------------------------------------------------------ */
+		
+		.slick-slider
+		{
+		    position: relative;
+
+		    display: block;
+		    box-sizing: border-box;
+
+		    -webkit-user-select: none;
+		       -moz-user-select: none;
+		        -ms-user-select: none;
+		            user-select: none;
+
+		    -webkit-touch-callout: none;
+		    -khtml-user-select: none;
+		    -ms-touch-action: pan-y;
+		        touch-action: pan-y;
+		    -webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list
+		{
+		    position: relative;
+
+		    display: block;
+		    overflow: hidden;
+
+		    margin: 0;
+		    padding: 0;
+		}
+		.slick-list:focus
+		{
+		    outline: none;
+		}
+		.slick-list.dragging
+		{
+		    cursor: pointer;
+		    cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+		    -webkit-transform: translate3d(0, 0, 0);
+		       -moz-transform: translate3d(0, 0, 0);
+		        -ms-transform: translate3d(0, 0, 0);
+		         -o-transform: translate3d(0, 0, 0);
+		            transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track
+		{
+		    position: relative;
+		    top: 0;
+		    left: 0;
+
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+		    display: table;
+
+		    content: '';
+		}
+		.slick-track:after
+		{
+		    clear: both;
+		}
+		.slick-loading .slick-track
+		{
+		    visibility: hidden;
+		}
+
+		.slick-slide
+		{
+		    display: none;
+		    float: left;
+
+		    height: 100%;
+		    min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+		    float: right;
+		}
+		.slick-slide img
+		{
+		    display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+		    display: none;
+		}
+		.slick-slide.dragging img
+		{
+		    pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+		    display: block;
+		}
+		.slick-loading .slick-slide
+		{
+		    visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+		    display: block;
+
+		    height: auto;
+
+		    border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+		    display: none;
+		}
+	</style>
+
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap" as="style">
+
+	<link rel="preload" href="css/style.css" as="style">
+</head>
+<body>
+<div class="wrapper">
+	<header class="header animate fade-top">
+		<div class="container">
+			<div class="header__logo">
+				<a href="#" class="logo">Дончев Комерс</a>
+			</div>
+
+			<div class="header__group">
+				<div class="header__group-inner">
+					<nav class="nav">
+						<ul>
+							<li>
+								<a href="#" class="ico-nav-play before">Начало</a>
+							</li>
+				
+							<li>
+								<a href="#" class="ico-nav-group before">За Нас</a>
+							</li>
+				
+							<li>
+								<a href="#" class="ico-nav-dashboard before">Проекти</a>
+				
+								<ul class="nav-dropdown">
+									<li>
+										<a href="#">Завършени проекти</a>
+									</li>
+				
+									<li>
+										<a href="#">Текущи и бъдещи проекти</a>
+									</li>
+								</ul>
+							</li>
+				
+							<li>
+								<a href="#" class="ico-nav-house before">Имоти за продан</a>
+							</li>
+				
+							<li>
+								<a href="#" class="ico-nav-chatbox before">Блог</a>
+							</li>
+				
+							<li>
+								<a href="#" class="ico-nav-envelope before">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+				
+					<div class="header__inner">
+						<div class="search">
+							<span class="search__toggle ico-search js-toggle hidden-sm" data-target=".search" data-class="search-visible" data-autoclose>Отвори/Затвори търсачката</span>
+				
+							<input type="text" id="search-field" placeholder="Търсене">
+						</div>
+				
+						<div class="nav-lang">
+							<span class="nav-lang__active ico-bg js-toggle" data-target=".nav-lang" data-class="nav-lang-expanded" data-autoclose>Български</span>
+				
+							<ul>
+								<li>
+									<a href="#" class="bg">Български</a>
+								</li>
+				
+								<li>
+									<a href="#" class="en">English</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-btn visible-sm js-toggle" data-target=".header" data-class="nav--visible" data-autoclose>
+				<span>Toggle navigation</span>
+
+				<span></span>
+
+				<span></span>
+			</div>
+		</div>
+	</header>
+
+	<div class="page js-static-header">
+		<div class="intro-small animate fade-top" style="background-image: url()">
+			<div class="container">
+				<h1>Повече за Дончев Комерс 96</h1>
+			</div>
+		</div>
+
+		<section class="section-info">
+			<div class="container">
+				<div class="section__inner animate">
+					<div class="section__image fade-left">
+						<img data-src="" alt="" class="lazyload">
+					</div>
+
+					<div class="section__content fade-right">
+						<h3>История и принципи</h3>
+
+						<p>Фирмата е основана през 1996 година в град Варна, със строителни дейности започва да се занимава през 2004 година. Нашият основен предмет на дейност е проектиране, строителство и ремонт на жилищни сгради и промишлени обекти. През годините фирмата е изградила собствена материална база, квалифициран управленски състав и опитни и обучени строителни работници. Принципните ни съображения са свързани с удовлетвореността не само на нашите клиенти, но и на крайните потребители.</p>
+					</div>
+				</div>
+
+				<div class="section__inner section__inner--reversed animate">
+					<div class="section__image fade-right">
+						<img data-src="" alt="" class="lazyload">
+					</div>
+
+					<div class="section__content fade-left">
+						<h3>Как работим?</h3>
+
+						<p>Стремим се да осигурим на клиентите ни спокойствието и сигурността, от които се нуждаят, докато ние се грижим за строителството или ремонта на техните офиси, апартаменти, вили или търговски обекти. Изграждането на максимален комфорт и минимални неприятности са един от основните ни приоритети в процеса на нашата работа. Фирмата се стреми да работи изцяло със собствено оборудване за да се избегнат забавяния в сроковете, поради ангажираност на под-изпълнители.</p>
+					</div>
+				</div>
+
+				<div class="section__inner animate">
+					<div class="section__image fade-left">
+						<img data-src="" alt="" class="lazyload">
+					</div>
+
+					<div class="section__content fade-right">
+						<h3>Основни ценности</h3>
+
+						<p>Професионализъм, високи постижения, работим с креативност, гъвкавост и иновации, за да сме сигурни, че резултатите, които ще постигнем са с най-добро качество. Нашите действия, планове и проекти са насочени към подобряване на околната среда и намаляването на негативните последици за нея. Всеки от проектите ни е съобразен с икономическата и финансова обстановка, техническа осъществимост, естетически вид и функционалност.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="footer animate fade-top lazyload">
+		<div class="container">
+			<div class="footer__cols cols">
+				<div class="footer__col col-md--1of4 col-xs--1of2">
+					<div class="footer__title">Контакти:</div>
+
+					<ul class="footer__list">
+						<li class="ico-building-mini before">
+							<a href="#">ДОНЧЕВ КОМЕРС 96</a>
+						</li>
+
+						<li class="ico-pin before">
+							<a href="#">улица "Беласица" 42, 9000 Варна</a>
+						</li>
+
+						<li class="ico-phone before">
+							<a href="tel:0899988689">0899 988 689</a>, <a href="tel:0897882577">0897 882 577</a>
+						</li>
+
+						<li class="ico-email before">
+							<a href="mailto:office@donchev-96.com">office@donchev-96.com</a>
+						</li>
+
+						<li class="ico-globe before">
+							<a href="#">donchev-96.com</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__col col-md--1of4 col-xs--1of2">
+					<div class="footer__title">За Нас:</div>
+
+					<div class="footer__entry">Дончев Комерс 96 е фирма занимаваща се със строителна дейност - проектиране, изграждане, ремонт. На пазара от 12 години. Над 20 луксозни завършени проекти. <a href="#">Прочети още...</a></div>
+
+					<a href="#" class="footer__social-link ico-facebook">Facebook</a>
+				</div>
+
+				<div class="footer__col col-md--1of4 col-xxs--1of2">
+					<div class="footer__title">Кратки връзки:</div>
+
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Начало</a>
+							</li>
+
+							<li>
+								<a href="#">За нас</a>
+							</li>
+
+							<li>
+								<a href="#">Проекти</a>
+							</li>
+
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="footer__col col-md--1of4 col-xxs--1of2">
+					<div class="footer__title">Имоти за продан без посредник:</div>
+
+					<nav class="footer__nav">
+						<ul>
+							<li>
+								<a href="#">Апартаменти</a>
+							</li>
+
+							<li>
+								<a href="#">Кабинети</a>
+							</li>
+
+							<li>
+								<a href="#">Гаражи</a>
+							</li>
+
+							<li>
+								<a href="#">Парко места</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/functions.js" async></script>
+
+</body>
+</html>
