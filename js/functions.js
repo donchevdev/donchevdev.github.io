@@ -59,6 +59,16 @@ $win
 			$offset.css('paddingTop', $header.outerHeight());
 		}
 	})
+	.on('load', function() {
+		$('.slider-images .slides').slick({
+			dots         : false,
+			infinite     : false,
+			arrows       : false,
+			autoplay     : true,
+			autoplaySpeed: 5000,
+			infinite 	 : true
+		});
+	})
 	.on('resize', function() {
 		/*
 		 * Move language navigation
