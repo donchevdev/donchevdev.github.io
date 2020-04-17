@@ -87,9 +87,11 @@
 
 		h1 { font-size: 56px; line-height: 1.04; }
 		h2 { font-size: 42px; line-height: 1; }
+		h3 { font-size: 32px; line-height: 1.2; }
 
 		h1,
-		h2 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
+		h2,
+		h3 { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
 
 		.lazyload:before,
 		.lazyload:after,
@@ -298,6 +300,21 @@
 		}
 
 		/* ------------------------------------------------------------ *\
+			Page
+		\* ------------------------------------------------------------ */
+		
+		.page { padding-top: 0; transition: padding .15s; }
+
+		/* ------------------------------------------------------------ *\
+			Intro Small
+		\* ------------------------------------------------------------ */
+		
+		.intro-small { position: relative; padding: 50px 0; text-align: center; background-size: cover; background-position: center center; }
+		.intro-small:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(229, 231, 241, 0.8); }
+
+		.intro-small .container { position: relative; z-index: 1; }
+
+		/* ------------------------------------------------------------ *\
 			Btn
 		\* ------------------------------------------------------------ */
 
@@ -461,6 +478,24 @@
 
 			.service .service__title { font-size: 18px; }
 		}
+
+		/* ------------------------------------------------------------ *\
+			Section Info
+		\* ------------------------------------------------------------ */
+		
+		.section-info { position: relative; padding: 50px 0; line-height: 1.75; overflow: hidden; }
+		.section-info:before { content: ''; position: absolute; width: 1162px; height: 1162px; top: -184px; right: -412px; border-radius: 100px; transform: rotate(45deg); opacity: 0; visibility: hidden; background: rgba(233, 240, 244, 0.5); transition: opacity .15s, visibility .15s; }
+		.section-info.lazyloaded:before { opacity: 1; visibility: visible; }
+		
+		.section-info .container { position: relative; z-index: 1; }
+		.section-info .section__content { flex: 0 1 100%; }
+
+		.section-info .section__image { position: relative; max-width: 238px; max-height: 238px; height: 238px; flex: 0 0 238px; margin-right: 98px; transform: rotate(45deg); border-radius: 30px; box-shadow: 0 0 40px rgba(47, 51, 64, .28); overflow: hidden; }
+		.section-info .section__image img { position: absolute; width: 141%; max-width: none; height: 141%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); }
+		
+		.section-info .section__inner { display: flex; padding: 40px 0 40px 40px; align-items: center; }
+		.section-info .section__inner--reversed { flex-flow: row-reverse nowrap; padding: 40px 40px 40px 0; }
+		.section-info .section__inner--reversed .section__image { margin: 0 0 0 98px; }
 
 		/* ------------------------------------------------------------ *\
 			Slick
@@ -673,17 +708,17 @@
 	</header>
 
 	<div class="page js-static-header">
-		<div class="intro-small animate fade-top" style="background-image: url()">
+		<div class="intro-small animate fade-top" style="background-image: url(images/intro-small-bg.jpg);">
 			<div class="container">
 				<h1>Повече за Дончев Комерс 96</h1>
 			</div>
 		</div>
 
-		<section class="section-info">
+		<section class="section-info lazyload">
 			<div class="container">
 				<div class="section__inner animate">
 					<div class="section__image fade-left">
-						<img data-src="" alt="" class="lazyload">
+						<img data-src="images/temp/section-info-1.jpg" alt="" class="lazyload" width="336" height="336">
 					</div>
 
 					<div class="section__content fade-right">
@@ -695,7 +730,7 @@
 
 				<div class="section__inner section__inner--reversed animate">
 					<div class="section__image fade-right">
-						<img data-src="" alt="" class="lazyload">
+						<img data-src="images/temp/section-info-2.jpg" alt="" class="lazyload" width="336" height="336">
 					</div>
 
 					<div class="section__content fade-left">
@@ -707,7 +742,7 @@
 
 				<div class="section__inner animate">
 					<div class="section__image fade-left">
-						<img data-src="" alt="" class="lazyload">
+						<img data-src="images/temp/section-info-3.jpg" alt="" class="lazyload" width="336" height="336">
 					</div>
 
 					<div class="section__content fade-right">
