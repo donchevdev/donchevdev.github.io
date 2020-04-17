@@ -105,6 +105,9 @@
 		@media (max-width: 1023px) {
 			h1 { font-size: 34px; }
 			h2 { font-size: 30px; }
+
+			h3,
+			.h3-like { font-size: 24px; }
 		}
 
 		/* ------------------------------------------------------------ \
@@ -315,6 +318,8 @@
 		.intro-small { position: relative; padding: 50px 0; text-align: center; background-size: cover; background-position: center center; }
 		.intro-small:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(229, 231, 241, 0.8); }
 
+		.intro-small h1 { margin: 0; }
+
 		.intro-small .container { position: relative; z-index: 1; }
 
 		@media (max-width: 767px) {
@@ -497,16 +502,29 @@
 		.section-info .container { position: relative; z-index: 1; }
 		.section-info .section__content { flex: 0 1 100%; }
 
-		.section-info .section__image { position: relative; max-width: 238px; height: 238px; max-height: 238px; flex: 0 0 238px; margin-right: 98px; transform: rotate(45deg); border-radius: 30px; box-shadow: 0 0 40px rgba(47, 51, 64, .28); overflow: hidden; }
+		.section-info .section__image { position: relative; width: 238px; max-width: 238px; height: 238px; max-height: 238px; flex: 0 0 238px; margin-right: 98px; transform: rotate(45deg); border-radius: 30px; box-shadow: 0 0 40px rgba(47, 51, 64, .28); overflow: hidden; }
 		.section-info .section__image img { position: absolute; width: 141%; max-width: none; height: 141%; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); }
 		
 		.section-info .section__inner { display: flex; padding: 40px 0 40px 40px; align-items: center; }
-		.section-info .section__inner--reversed { flex-flow: row-reverse nowrap; padding: 40px 40px 40px 0; }
+		.section-info .section__inner--reversed { flex-flow: row-reverse nowrap; padding: 40px 40px 40px 0; text-align: right; }
 		.section-info .section__inner--reversed .section__image { margin: 0 0 0 98px; }
 
 		@media (max-width: 1023px) {
-			.section-info .section__image { max-width: 166px; height: 166px; max-height: 166px; flex: 0 0 166px; margin-right: 60px; }
+			.section-info .section__image { width: 166px; max-width: 166px; height: 166px; max-height: 166px; flex: 0 0 166px; margin-right: 60px; }
 			.section-info .section__image--reversed { margin-left: 60px; }
+		}
+
+		@media (max-width: 767px) {
+			.section-info { line-height: 1.5; }
+			.section-info:before { width: 428px; height: 428px; border-radius: 50px; top: 220px; right: -254px; }
+
+			.section-info .section__title { margin-bottom: 5px; }
+			.section-info .section__image { position: absolute; top: 0; left: -30px; opacity: .7; }
+			.section-info .section__content { position: relative; z-index: 2; }
+
+			.section-info .section__inner { position: relative; display: block; padding: 140px 0 0; }
+			.section-info .section__inner + .section__inner { margin-top: 60px; }
+			.section-info .section__inner--reversed .section__image { left: auto; right: -30px; }
 		}
 
 		/* ------------------------------------------------------------ *\
@@ -730,7 +748,7 @@
 			<div class="container">
 				<div class="section__inner animate">
 					<div class="section__image fade-left">
-						<img data-src="images/temp/section-info-1.jpg" alt="Alt text goes here." class="lazyload" width="336" height="336">
+						<img src="images/temp/section-info-1.jpg" alt="Alt text goes here." width="336" height="336">
 					</div>
 
 					<div class="section__content fade-right">
@@ -742,7 +760,7 @@
 
 				<div class="section__inner section__inner--reversed animate">
 					<div class="section__image fade-right">
-						<img data-src="images/temp/section-info-2.jpg" alt="Alt text goes here." class="lazyload" width="336" height="336">
+						<img src="images/temp/section-info-2.jpg" alt="Alt text goes here." width="336" height="336">
 					</div>
 
 					<div class="section__content fade-left">
@@ -754,7 +772,7 @@
 
 				<div class="section__inner animate">
 					<div class="section__image fade-left">
-						<img data-src="images/temp/section-info-3.jpg" alt="Alt text goes here." class="lazyload" width="336" height="336">
+						<img src="images/temp/section-info-3.jpg" alt="Alt text goes here." width="336" height="336">
 					</div>
 
 					<div class="section__content fade-right">
