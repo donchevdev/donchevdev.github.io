@@ -418,6 +418,10 @@
 			.hidden-xs { display: none !important; }
 		}
 
+		/* Hide */
+
+		.hidden { display: none !important; }
+
 		/* BG Dark */
 
 		.bg-dark { color: #fff; 
@@ -533,7 +537,7 @@
 		
 		.quicknav { margin-bottom: 50px; font-family: 'Averta Demo PE', sans-serif; font-style: italic; }
 
-		.quicknav ul { display: flex; justify-content: center; }
+		.quicknav ul { display: flex; flex-flow: row wrap; justify-content: center; }
 		.quicknav li { margin: 0 13px; }
 		.quicknav a { display: block; padding: 15px 22px; border-radius: 4px; box-shadow: 0px 0px 16px 0px rgba(30, 43, 85, 0.35); color: #151c33; text-decoration: none; text-align: center; background: #fff; transition: color .15s, background .15s; }
 		
@@ -544,6 +548,13 @@
 
 		.quicknav--top { position: relative; margin-top: -25px; z-index: 1; }
 
+		@media (max-width: 767px) {
+			.quicknav { margin: 20px 0; }
+			
+			.quicknav li { margin: 8px; }
+			.quicknav a { padding: 10px 15px; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Blog Posts
 		\* ------------------------------------------------------------ */
@@ -552,7 +563,7 @@
 
 		.blog-posts .blog-post { margin-bottom: 20px; }
 
-		.blog-post img { display: block; transition: filter .15s; }
+		.blog-post img { display: block; width: 100%; transition: filter .15s; }
 		.blog-post a { position: relative; display: block; color: #fff; }
 		.blog-post a:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; visibility: hidden; background: rgba(0, 0, 0, 0.7); z-index: 1; transition: opacity .15s, visibility .15s; }
 		.blog-post a:hover:before { opacity: 1; visibility: visible; }
@@ -733,7 +744,7 @@
 							</li>
 				
 							<li>
-								<a href="#" class="ico-nav-chatbox before">Блог</a>
+								<a href="blog.html" class="ico-nav-chatbox before">Блог</a>
 							</li>
 				
 							<li>
@@ -784,7 +795,7 @@
 		</div>
 
 		<div class="container">
-			<div class="quicknav quicknav--top js-filters animate fade-top">
+			<div class="quicknav quicknav--top js-filters animate fade-top" data-filter="#blog-posts">
 				<ul>
 					<li class="active">
 						<a href="#all">Всички статии</a>
@@ -800,8 +811,8 @@
 				</ul>
 			</div>
 			
-			<div class="blog-posts cols animate fade-top">
-				<div class="blog-post col-md--1of3">
+			<div class="blog-posts cols animate fade-top" id="blog-posts">
+				<div class="blog-post col-md--1of3 col-xs--1of2" data-category="architecture">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -815,7 +826,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2" data-category="interior-design">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -829,7 +840,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2" data-category="interior-design">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -843,7 +854,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -857,7 +868,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -871,7 +882,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -885,7 +896,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -899,7 +910,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			
@@ -913,7 +924,7 @@
 					</a>
 				</div>
 			
-				<div class="blog-post col-md--1of3">
+				<div class="blog-post col-md--1of3 col-xs--1of2">
 					<a href="#">
 						<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
 			

@@ -86,6 +86,45 @@ $('link[rel="preload"]').each(function() {
 });
 
 /*
+ * Animated scrolling
+ */
+$('[href^="#"]:not([href="#"])').on('click', function(e) {
+	e.preventDefault();
+
+	$('html, body').animate({
+		scrollTop:  $($(this).attr('href')).scrollTop()
+	}, 800);
+});
+
+/*
+ * Filtering
+ */
+$('.js-filters').each(function() {
+	var $this          = $(this);
+	var $items         = $($this.data('filter')).children();
+	var hiddenClass    = 'hidden';
+	var navActiveClass = 'active';
+
+	$this.on('click', 'a', function(e) {
+		var $this    = $(this);
+		var href     = $this.attr('href').split('#').pop();
+		var $targets = href == 'all' ? $items : $items.filter('[data-category="' + href + '"]');
+
+		$items.addClass(hiddenClass);
+
+		$targets.removeClass(hiddenClass);
+
+		$this
+			.parent()
+				.addClass(navActiveClass)
+				.siblings()
+					.removeClass(navActiveClass);
+
+		return false;
+	});
+});
+
+/*
  * Toggles
  */
 $('.js-toggle').on('click', function(e){

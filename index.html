@@ -315,7 +315,7 @@
 			Intro Small
 		\* ------------------------------------------------------------ */
 		
-		.intro-small { position: relative; padding: 50px 0; text-align: center; background-size: cover; background-position: center center; }
+		.intro-small { position: relative; padding: 70px 0; text-align: center; background-size: cover; background-position: center center; }
 		.intro-small:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background: rgba(229, 231, 241, 0.8); }
 
 		.intro-small h1 { margin: 0; }
@@ -417,6 +417,10 @@
 		@media (max-width: 767px) {
 			.hidden-xs { display: none !important; }
 		}
+
+		/* Hide */
+
+		.hidden { display: none !important; }
 
 		/* BG Dark */
 
@@ -526,6 +530,52 @@
 			.section-info .section__inner + .section__inner { margin-top: 60px; }
 			.section-info .section__inner--reversed .section__image { left: auto; right: -30px; }
 		}
+
+		/* ------------------------------------------------------------ *\
+			Quicknav
+		\* ------------------------------------------------------------ */
+		
+		.quicknav { margin-bottom: 50px; font-family: 'Averta Demo PE', sans-serif; font-style: italic; }
+
+		.quicknav ul { display: flex; flex-flow: row wrap; justify-content: center; }
+		.quicknav li { margin: 0 13px; }
+		.quicknav a { display: block; padding: 15px 22px; border-radius: 4px; box-shadow: 0px 0px 16px 0px rgba(30, 43, 85, 0.35); color: #151c33; text-decoration: none; text-align: center; background: #fff; transition: color .15s, background .15s; }
+		
+		.quicknav a:hover,
+		.quicknav .active a { color: #fff; background: #1d8edd; }
+
+		/*  Modifier: Quicknavi Top */
+
+		.quicknav--top { position: relative; margin-top: -25px; z-index: 1; }
+
+		@media (max-width: 767px) {
+			.quicknav { margin: 20px 0; }
+			
+			.quicknav li { margin: 8px; }
+			.quicknav a { padding: 10px 15px; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Blog Posts
+		\* ------------------------------------------------------------ */
+		
+		.blog-posts { margin-bottom: 50px; }
+
+		.blog-posts .blog-post { margin-bottom: 20px; }
+
+		.blog-post img { display: block; width: 100%; transition: filter .15s; }
+		.blog-post a { position: relative; display: block; color: #fff; }
+		.blog-post a:before { content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; visibility: hidden; background: rgba(0, 0, 0, 0.7); z-index: 1; transition: opacity .15s, visibility .15s; }
+		.blog-post a:hover:before { opacity: 1; visibility: visible; }
+		.blog-post a:hover img { filter: blur(5px); }
+		.blog-post a:hover .blog-post__overlay { background: rgba(24, 139, 217, 0.9); }
+		
+		.blog-post .blog-post__date { margin-bottom: 15px; font-size: 14px; }
+		.blog-post .blog-post__title { margin-bottom: 4px; font-size: 20px; line-height: 1.1; }
+		.blog-post .blog-post__overlay { position: absolute; right: 15px; bottom: 10px; left: 15px; padding: 12px 15px; background: rgba(39, 42, 53, 0.9); z-index: 2; transition: background .15s; }
+
+		.blog-post .blog-post__link { font-weight: 700; }
+		.blog-post .blog-post__link:after { margin-left: 15px; }
 
 		/* ------------------------------------------------------------ *\
 			Slick
@@ -694,7 +744,7 @@
 							</li>
 				
 							<li>
-								<a href="#" class="ico-nav-chatbox before">Блог</a>
+								<a href="blog.html" class="ico-nav-chatbox before">Блог</a>
 							</li>
 				
 							<li>
