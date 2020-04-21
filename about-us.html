@@ -12,7 +12,7 @@
 	<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
 	<style>
-		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline }
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font-family: inherit; vertical-align: baseline }
 		:focus { outline: 0 }
 		article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 		body { line-height: 1 }
@@ -83,6 +83,8 @@
 		a { color: inherit; }
 		a:hover { text-decoration: none; }
 
+		p { margin-bottom: 25px; }
+
 		img { max-width: 100%; height: auto; }
 
 		h1 { font-size: 56px; line-height: 1.04; }
@@ -94,7 +96,7 @@
 		h1,
 		h2,
 		h3,
-		.h3-like { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; color: #242d4b; margin-bottom: 20px; }
+		.h3-like { font-family: 'Averta Demo PE'; font-style: italic; font-weight: 800; margin-bottom: 20px; }
 
 		.lazyload:before,
 		.lazyload:after,
@@ -306,10 +308,10 @@
 		}
 
 		/* ------------------------------------------------------------ *\
-			Page
+			Js Static Header
 		\* ------------------------------------------------------------ */
 		
-		.page { padding-top: 0; transition: padding .15s; }
+		.js-static-header { padding-top: 0; transition: padding .15s; }
 
 		/* ------------------------------------------------------------ *\
 			Intro Small
@@ -324,6 +326,56 @@
 
 		@media (max-width: 767px) {
 			.intro-small { padding: 25px 0; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Intro Blog
+		\* ------------------------------------------------------------ */
+		
+		.intro-blog { color: #fff; background: #272a35; }
+		
+		.intro-blog .container { position: relative; padding-top: 10px; padding-bottom: 35px; }
+		.intro-blog .intro__tag { position: absolute; bottom: -18px; left: 20px; padding: 8px 15px 9px; border-radius: 4px; font-size: 14px; background: #1d8edd; }
+		.intro-blog .intro__meta { font-size: 14px; color: rgba(255, 255, 255, 0.5); }
+		
+		/* ------------------------------------------------------------ *\
+			Blog Content
+		\* ------------------------------------------------------------ */
+		
+		.blog-content { padding: 50px 0; }
+
+		.blog-content .content { flex: 0 1 100%; }
+		.blog-content .sidebar { flex: 0 0 335px; margin-left: 45px; }
+		.blog-content .container { display: flex; }
+
+		@media (max-width: 1023px) {
+			.blog-content .sidebar { margin: 30px 0 0; }
+			.blog-content .container { display: block; }
+		}
+
+		@media (max-width: 767px) {
+			.blog-content { padding: 35px 0; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Content
+		\* ------------------------------------------------------------ */
+		
+		.content img { margin-bottom: 25px; }
+
+		@media (max-width: 539px) {
+			.content img { display: block; margin-right: auto; margin-left: auto; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Sidebar
+		\* ------------------------------------------------------------ */
+		
+		@media (min-width: 768px) and (max-width: 1023px) {
+			.sidebar { display: flex; flex-flow: row wrap; justify-content: space-between; }
+			
+			.sidebar .widget { flex: 0 0 100%; margin-bottom: 20px; }
+			.sidebar .widget--alt { max-width: calc(50% - 10px); }
 		}
 
 		/* ------------------------------------------------------------ *\
@@ -373,6 +425,16 @@
 		/* ------------------------------------------------------------ *\
 			Helpers
 		\* ------------------------------------------------------------ */
+
+		/* Alignment */
+
+		.alignright { float: right; margin-left: 20px; }
+		.alignleft { float: left; margin-right: 20px; }
+
+		@media (max-width: 539px) {
+			.alignleft,
+			.alignright { float: none; margin: 0 0 25px; }
+		}
 	
 		/* Columns */
 
@@ -430,7 +492,12 @@
 			background: -webkit-linear-gradient(left, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
 			background: linear-gradient(to right, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
 		}
+
 		.bg-dark h2 { color: #fff; }
+
+		/* BG Light */
+
+		.bg-light { background: #e9f0f4; }
 
 		/* ------------------------------------------------------------ *\
 			Animations
@@ -559,9 +626,11 @@
 			Blog Posts
 		\* ------------------------------------------------------------ */
 		
-		.blog-posts { margin-bottom: 50px; }
+		.blog-posts:not(:last-child) { margin-bottom: 50px; }
 
 		.blog-posts .blog-post { margin-bottom: 20px; }
+
+		.blog-post { text-align: left; }
 
 		.blog-post img { display: block; width: 100%; transition: filter .15s; }
 		.blog-post a { position: relative; display: block; color: #fff; }
@@ -570,12 +639,47 @@
 		.blog-post a:hover img { filter: blur(5px); }
 		.blog-post a:hover .blog-post__overlay { background: rgba(24, 139, 217, 0.9); }
 		
-		.blog-post .blog-post__date { margin-bottom: 15px; font-size: 14px; }
-		.blog-post .blog-post__title { margin-bottom: 4px; font-size: 20px; line-height: 1.1; }
+		.blog-post .blog-post__date { margin-bottom: 10px; font-size: 14px; }
+		.blog-post .blog-post__title { margin-bottom: 6px; font-family: 'Averta Demo PE'; font-size: 20px; line-height: 1.1; }
 		.blog-post .blog-post__overlay { position: absolute; right: 15px; bottom: 10px; left: 15px; padding: 12px 15px; background: rgba(39, 42, 53, 0.9); z-index: 2; transition: background .15s; }
 
 		.blog-post .blog-post__link { font-weight: 700; }
 		.blog-post .blog-post__link:after { margin-left: 15px; }
+
+		/* ------------------------------------------------------------ *\
+			Widgets
+		\* ------------------------------------------------------------ */
+
+		.widget { margin-bottom: 25px; }
+		
+		.widget .widget__head { padding: 14px 25px; border-radius: 4px; font-weight: 700; color: #272a35; background: #d5e2ea; }
+		.widget .widget__body { padding: 17px 15px; margin-top: -4px; border-width: 0 1px 1px 1px; border-style: solid; border-color: #d5e2ea; border-radius: 4px; }
+		
+		.widget .widget__search input { display: block; width: 100%; height: 45px; padding: 0 20px 0 45px; border: 1px solid #d5e2ea; border-radius: 4px; color: rgba(39, 42, 53, 0.5); background: url(images/widget-search.png) no-repeat 14px center / 17px 17px; transition: border-color .15s, color .15s, background .15s; }
+		.widget .widget__search input:focus { border-color: #272a35; color: #272a35; background-image: url(images/widget-search-focus.png); }
+
+		/* ------------------------------------------------------------ *\
+			List Links
+		\* ------------------------------------------------------------ */
+		
+		.list-links { color: #272a35; }
+
+		.list-links li + li { margin-top: 14px; }
+		.list-links a { display: inline-block; vertical-align: middle; text-decoration: none; transition: color .15s; }
+		.list-links a:hover { color: #1d8edd; }
+
+		/* ------------------------------------------------------------ *\
+			List Properties
+		\* ------------------------------------------------------------ */
+		
+		.list-properties { line-height: 1.13; font-weight: 700; color: #212b49; }
+		
+		.list-properties li + li { padding-top: 15px; margin-top: 15px; border-top: 1px solid #d5e2ea; }
+		.list-properties a { display: block; text-decoration: none; transition: opacity .15s; }
+		.list-properties a:hover { opacity: .7; }
+		.list-properties a:after { content: ''; display: table; line-height: 0; clear: both; }
+		.list-properties strong { display: block; margin-top: 5px; font-size: 22px; color: #bac2da; }
+		.list-properties img { float: left; margin-right: 10px; }
 
 		/* ------------------------------------------------------------ *\
 			Slick
