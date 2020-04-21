@@ -348,11 +348,35 @@
 		.blog-content .sidebar { flex: 0 0 335px; margin-left: 45px; }
 		.blog-content .container { display: flex; }
 
+		@media (max-width: 1023px) {
+			.blog-content .sidebar { margin: 30px 0 0; }
+			.blog-content .container { display: block; }
+		}
+
+		@media (max-width: 767px) {
+			.blog-content { padding: 35px 0; }
+		}
+
 		/* ------------------------------------------------------------ *\
 			Content
 		\* ------------------------------------------------------------ */
 		
 		.content img { margin-bottom: 25px; }
+
+		@media (max-width: 539px) {
+			.content img { display: block; margin-right: auto; margin-left: auto; }
+		}
+
+		/* ------------------------------------------------------------ *\
+			Sidebar
+		\* ------------------------------------------------------------ */
+		
+		@media (min-width: 768px) and (max-width: 1023px) {
+			.sidebar { display: flex; flex-flow: row wrap; justify-content: space-between; }
+			
+			.sidebar .widget { flex: 0 0 100%; margin-bottom: 20px; }
+			.sidebar .widget--alt { max-width: calc(50% - 10px); }
+		}
 
 		/* ------------------------------------------------------------ *\
 			Btn
@@ -406,6 +430,11 @@
 
 		.alignright { float: right; margin-left: 20px; }
 		.alignleft { float: left; margin-right: 20px; }
+
+		@media (max-width: 539px) {
+			.alignleft,
+			.alignright { float: none; margin: 0 0 25px; }
+		}
 	
 		/* Columns */
 
@@ -928,7 +957,7 @@
 						</div>
 					</div>
 
-					<div class="widget">
+					<div class="widget widget--alt">
 						<div class="widget__head">Последни Публикации</div>
 
 						<div class="widget__body">
@@ -956,7 +985,7 @@
 						</div>
 					</div>
 
-					<div class="widget">
+					<div class="widget widget--alt">
 						<div class="widget__head">Имоти за продан</div>
 
 						<div class="widget__body">
