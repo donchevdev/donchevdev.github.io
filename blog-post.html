@@ -343,12 +343,16 @@
 		\* ------------------------------------------------------------ */
 		
 		.blog-content { padding: 50px 0; }
-		
-		.blog-content img { margin-bottom: 25px; }
 
 		.blog-content .content { flex: 0 1 100%; }
 		.blog-content .sidebar { flex: 0 0 335px; margin-left: 45px; }
 		.blog-content .container { display: flex; }
+
+		/* ------------------------------------------------------------ *\
+			Content
+		\* ------------------------------------------------------------ */
+		
+		.content img { margin-bottom: 25px; }
 
 		/* ------------------------------------------------------------ *\
 			Btn
@@ -614,6 +618,41 @@
 		.blog-post .blog-post__link:after { margin-left: 15px; }
 
 		/* ------------------------------------------------------------ *\
+			Widgets
+		\* ------------------------------------------------------------ */
+
+		.widget { margin-bottom: 25px; }
+		
+		.widget .widget__head { padding: 14px 25px; border-radius: 4px; font-weight: 700; color: #272a35; background: #d5e2ea; }
+		.widget .widget__body { padding: 17px 15px; margin-top: -4px; border-width: 0 1px 1px 1px; border-style: solid; border-color: #d5e2ea; border-radius: 4px; }
+		
+		.widget .widget__search input { display: block; width: 100%; height: 45px; padding: 0 20px 0 45px; border: 1px solid #d5e2ea; border-radius: 4px; color: rgba(39, 42, 53, 0.5); background: url(images/widget-search.png) no-repeat 14px center / 17px 17px; transition: border-color .15s, color .15s, background .15s; }
+		.widget .widget__search input:focus { border-color: #272a35; color: #272a35; background-image: url(images/widget-search-focus.png); }
+
+		/* ------------------------------------------------------------ *\
+			List Links
+		\* ------------------------------------------------------------ */
+		
+		.list-links { color: #272a35; }
+
+		.list-links li + li { margin-top: 14px; }
+		.list-links a { display: inline-block; vertical-align: middle; text-decoration: none; transition: color .15s; }
+		.list-links a:hover { color: #1d8edd; }
+
+		/* ------------------------------------------------------------ *\
+			List Properties
+		\* ------------------------------------------------------------ */
+		
+		.list-properties { line-height: 1.13; font-weight: 700; color: #212b49; }
+		
+		.list-properties li + li { padding-top: 15px; margin-top: 15px; border-top: 1px solid #d5e2ea; }
+		.list-properties a { display: block; text-decoration: none; transition: opacity .15s; }
+		.list-properties a:hover { opacity: .7; }
+		.list-properties a:after { content: ''; display: table; line-height: 0; clear: both; }
+		.list-properties strong { display: block; margin-top: 5px; font-size: 22px; color: #bac2da; }
+		.list-properties img { float: left; margin-right: 10px; }
+
+		/* ------------------------------------------------------------ *\
 			Slick
 		\* ------------------------------------------------------------ */
 		
@@ -841,7 +880,7 @@
 			
 					<h3>Заключвайте пощенската си кутия</h3>
 			
-					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+					<img src="https://via.placeholder.com/820x450.png" alt="Alt text goes here" width="820" height="450">
 			
 					<p>Дори и домът ви да е защитен, вашата пощенска кутия може да е лесна мишена, особено, ако е на улицата. Кражбата на самоличност е нарастващ проблем, а вашата пощенска кутия е най-лесното място за достъп до личните ви данни – телефонни номера, номера на сметки и друга важна информация. Ако не разполагате със заключваща се пощенска кутия, обмислете за такава инвестиция. Най-добре проверявайте всеки ден пощата си и не позволявайте да се натрупва кореспонденция в нея.</p>
 			
@@ -859,7 +898,7 @@
 			
 					<h3>Инвестирайте във врата</h3>
 			
-					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+					<img src="https://via.placeholder.com/820x450.png" alt="Alt text goes here" width="820" height="450">
 			
 					<p>Крадците могат да влезнат и през прозорците, но много по-лесно е през вратата. Уверете се, че вратите ви са сигурни. Поръчайте си врата с допълнителен защитен слой. Това ще откаже крадците да нападнат именно вашия дом.</p>
 			
@@ -868,7 +907,7 @@
 					<p>Добра идея е да инсталирате алармена система, ако дома ви няма такава. Самия факт, че имате алармена система има възпиращ ефект. Но ако някой нагъл крадец реши да не обръща внимание на алармата, то сигнала за нарушител в дома ще го накара да побегне.</p>
 			
 					<figure>
-						<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+						<img src="https://via.placeholder.com/820x450.png" alt="Alt text goes here" width="820" height="450">
 			
 						<figcaption>Ако бюджетът Ви е малък, можете да залепите фалшив стикер с логото на компания за сигурност. Това ще накара крадците да се замислят преди да атакуват.</figcaption>
 					</figure>
@@ -877,12 +916,94 @@
 			
 					<h3>Алармена система</h3>
 			
-					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+					<img src="https://via.placeholder.com/820x450.png" alt="Alt text goes here" width="820" height="450">
 			
 					Сключете договор за застраховка на собствеността. <strong>По този начин ще се си гарантирате обезщетение в случай на кражба.</strong> Прегледайте офертите, предлагани от застрахователните компании и изберете най-подходящата за вашия случай.
 				</div>
 			
-				<aside class="sidebar"></aside>
+				<aside class="sidebar">
+					<div class="widget">
+						<div class="widget__search">
+							<input type="text" placeholder="Търсене">
+						</div>
+					</div>
+
+					<div class="widget">
+						<div class="widget__head">Последни Публикации</div>
+
+						<div class="widget__body">
+							<ul class="list-links">
+								<li>
+									<a href="#">Възползвайте се максимално от възможностите на вашата баня</a>
+								</li>
+
+								<li>
+									<a href="#">Съвети за подобряване сигурността на апартамента Ви</a>
+								</li>
+
+								<li>
+									<a href="#">Как да изберем апартамент?</a>
+								</li>
+
+								<li>
+									<a href="#">10 тенденции при интериорния дизайн през 2015</a>
+								</li>
+
+								<li>
+									<a href="#">10 тенденции при кухните през 2015</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="widget">
+						<div class="widget__head">Имоти за продан</div>
+
+						<div class="widget__body">
+							<ul class="list-properties">
+								<li>
+									<a href="#">
+										<img src="https://via.placeholder.com/120x120.png" alt="Alt text goes here">
+									
+										Двустаен Апартамент №6 ЕТ.4  86,19 М2
+
+										<strong>59 900 €</strong>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="https://via.placeholder.com/120x120.png" alt="Alt text goes here">
+									
+										Двустаен Апартамент №6 ЕТ.4  86,19 М2
+
+										<strong>59 900 €</strong>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="https://via.placeholder.com/120x120.png" alt="Alt text goes here">
+									
+										Двустаен Апартамент №6 ЕТ.4  86,19 М2
+
+										<strong>59 900 €</strong>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="https://via.placeholder.com/120x120.png" alt="Alt text goes here">
+									
+										Двустаен Апартамент №6 ЕТ.4  86,19 М2
+
+										<strong>59 900 €</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
 			</div>
 		</div>
 		
