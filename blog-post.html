@@ -83,6 +83,8 @@
 		a { color: inherit; }
 		a:hover { text-decoration: none; }
 
+		p { margin-bottom: 25px; }
+
 		img { max-width: 100%; height: auto; }
 
 		h1 { font-size: 56px; line-height: 1.04; }
@@ -335,6 +337,18 @@
 		.intro-blog .container { position: relative; padding-top: 10px; padding-bottom: 35px; }
 		.intro-blog .intro__tag { position: absolute; bottom: -18px; left: 20px; padding: 8px 15px 9px; border-radius: 4px; font-size: 14px; background: #1d8edd; }
 		.intro-blog .intro__meta { font-size: 14px; color: rgba(255, 255, 255, 0.5); }
+		
+		/* ------------------------------------------------------------ *\
+			Blog Content
+		\* ------------------------------------------------------------ */
+		
+		.blog-content { padding: 50px 0; }
+		
+		.blog-content img { margin-bottom: 25px; }
+
+		.blog-content .content { flex: 0 1 100%; }
+		.blog-content .sidebar { flex: 0 0 335px; margin-left: 45px; }
+		.blog-content .container { display: flex; }
 
 		/* ------------------------------------------------------------ *\
 			Btn
@@ -383,6 +397,11 @@
 		/* ------------------------------------------------------------ *\
 			Helpers
 		\* ------------------------------------------------------------ */
+
+		/* Alignment */
+
+		.alignright { float: right; margin-left: 20px; }
+		.alignleft { float: left; margin-right: 20px; }
 	
 		/* Columns */
 
@@ -440,7 +459,12 @@
 			background: -webkit-linear-gradient(left, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
 			background: linear-gradient(to right, rgba(39,42,53,1) 0%,rgba(55,59,72,1) 100%);
 		}
+
 		.bg-dark h2 { color: #fff; }
+
+		/* BG Light */
+
+		.bg-light { background: #e9f0f4; }
 
 		/* ------------------------------------------------------------ *\
 			Animations
@@ -569,9 +593,11 @@
 			Blog Posts
 		\* ------------------------------------------------------------ */
 		
-		.blog-posts { margin-bottom: 50px; }
+		.blog-posts:not(:last-child) { margin-bottom: 50px; }
 
 		.blog-posts .blog-post { margin-bottom: 20px; }
+
+		.blog-post { text-align: left; }
 
 		.blog-post img { display: block; width: 100%; transition: filter .15s; }
 		.blog-post a { position: relative; display: block; color: #fff; }
@@ -580,8 +606,8 @@
 		.blog-post a:hover img { filter: blur(5px); }
 		.blog-post a:hover .blog-post__overlay { background: rgba(24, 139, 217, 0.9); }
 		
-		.blog-post .blog-post__date { margin-bottom: 15px; font-size: 14px; }
-		.blog-post .blog-post__title { margin-bottom: 4px; font-size: 20px; line-height: 1.1; }
+		.blog-post .blog-post__date { margin-bottom: 10px; font-size: 14px; }
+		.blog-post .blog-post__title { margin-bottom: 6px; font-family: 'Averta Demo PE'; font-size: 20px; line-height: 1.1; }
 		.blog-post .blog-post__overlay { position: absolute; right: 15px; bottom: 10px; left: 15px; padding: 12px 15px; background: rgba(39, 42, 53, 0.9); z-index: 2; transition: background .15s; }
 
 		.blog-post .blog-post__link { font-weight: 700; }
@@ -797,14 +823,116 @@
 		</div>
 	</header>
 
-	<div class="blog-content animate fade-top js-static-header">
-		<div class="intro-blog">
+	<div class="page">
+		<div class="intro-blog animate fade-top js-static-header">
 			<div class="container">
 				<h1>Съвети за подобряване сигурността на апартамента Ви</h1>
-
+		
 				<div class="intro__meta">От: <strong>Дончев</strong> | Публикуван: <strong>17 май 2015</strong></div>
-
+		
 				<div class="intro__tag">Архитектура</div>
+			</div>
+		</div>
+		
+		<div class="blog-content animate fade-top">
+			<div class="container">
+				<div class="content">
+					<p>Вашият дом е Вашата крепост – мястото, където да се чувствате сигурни и защитени. Един обир или влизане с взлом в дома ви е скъпо не само на финансово равнище, но и в личен план. <strong>Това е нахлуване в личното ви пространство.</strong> Жертви на крадци стават не само хора, които живеят в „лоши квартали„, но и хора, които не са се погрижили за сигурността на къщата или апартамента си. Престъпниците търсят лесни мишени. Ето 10 съвета, за да се уверите, че не сте от тях:</p>
+			
+					<h3>Заключвайте пощенската си кутия</h3>
+			
+					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+			
+					<p>Дори и домът ви да е защитен, вашата пощенска кутия може да е лесна мишена, особено, ако е на улицата. Кражбата на самоличност е нарастващ проблем, а вашата пощенска кутия е най-лесното място за достъп до личните ви данни – телефонни номера, номера на сметки и друга важна информация. Ако не разполагате със заключваща се пощенска кутия, обмислете за такава инвестиция. Най-добре проверявайте всеки ден пощата си и не позволявайте да се натрупва кореспонденция в нея.</p>
+			
+					<img src="https://via.placeholder.com/300x200.png" alt="Alt text goes here" class="alignright" width="300" height="200">
+			
+					<h3>Опознай съседите си</h3>
+			
+					<p>Активните съседи могат да бъдат много ефективни при борбата с престъпността и кражбите. За съжаление в България, много малко от хората биха направили нещо дори и да чуват притеснителни звуци от входа. За това поздравявайте, разговаряйте и опознайте съседите си. Освен, че ще подобрите сигурността във входа в който живеете, това е чудесен начин да завържете нови приятелства, особено ако сте нови в сградата.</p>
+			
+					<img src="https://via.placeholder.com/300x220.png" alt="Alt text goes here" class="alignright" width="300" height="220">
+			
+					<h3>Внимавайте какво изхвърляте</h3>
+			
+					<p>Вашия боклук, както и пощата ви съдържа информация, която крадците могат да използват, за да ви опознаят. Нарежете всички стари кредитни карти преди да ги изхвърлите, това важи и за стари сметки или други документи с изтекъл срок. Ако сте направили голяма покупка като нов телевизор или компютър не оставяйте кутията до контейнера за боклук. Това е като покана за крадците да преровят дома ви. Най-добре изхвърлете кашона в контейнер, определен за хартиени отпадъци или го предайте на пункт за хартия.</p>
+			
+					<h3>Инвестирайте във врата</h3>
+			
+					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+			
+					<p>Крадците могат да влезнат и през прозорците, но много по-лесно е през вратата. Уверете се, че вратите ви са сигурни. Поръчайте си врата с допълнителен защитен слой. Това ще откаже крадците да нападнат именно вашия дом.</p>
+			
+					<h3>Алармена система</h3>
+			
+					<p>Добра идея е да инсталирате алармена система, ако дома ви няма такава. Самия факт, че имате алармена система има възпиращ ефект. Но ако някой нагъл крадец реши да не обръща внимание на алармата, то сигнала за нарушител в дома ще го накара да побегне.</p>
+			
+					<figure>
+						<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+			
+						<figcaption>Ако бюджетът Ви е малък, можете да залепите фалшив стикер с логото на компания за сигурност. Това ще накара крадците да се замислят преди да атакуват.</figcaption>
+					</figure>
+			
+					<p>Плътните завеси или щори могат да попречат на разбойниците да бъдат изкушени от всички ценности, които могат да видят през прозорците Ви. Сложете плътни завеси или щори, които да блокират гледката отвън и не забравяйте да ги пускате, когато не сте си у дома. По този начин ще избегнете сканиране на собствеността ви от недоброжелатели и ще намалите риска от влизане с взлом. Погледнете и от хубавата страна, освен че ще спрете любопитните погледи към вашата собственост, можете да предадете по-свеж и естетичен вид на интериора ви!</p>
+			
+					<h3>Алармена система</h3>
+			
+					<img src="https://via.placeholder.com/800x450.png" alt="Alt text goes here" width="800" height="450">
+			
+					Сключете договор за застраховка на собствеността. <strong>По този начин ще се си гарантирате обезщетение в случай на кражба.</strong> Прегледайте офертите, предлагани от застрахователните компании и изберете най-подходящата за вашия случай.
+				</div>
+			
+				<aside class="sidebar"></aside>
+			</div>
+		</div>
+		
+		<div class="section-secondary animate fade-top bg-light animated lazyloaded">
+			<div class="container">
+				<h2>Още Публикации</h2>
+		
+				<div class="blog-posts cols">
+					<div class="blog-post col-md--1of3 col-xs--1of2">
+						<a href="#">
+							<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
+				
+							<div class="blog-post__overlay">
+								<div class="blog-post__title">Възползвайте се максимално от възможностите на вашата баня</div>
+				
+								<div class="blog-post__date">24 юни 2015</div>
+				
+								<strong class="blog-post__link ico-arrow-right after">Прочети още</strong>
+							</div>
+						</a>
+					</div>
+				
+					<div class="blog-post col-md--1of3 col-xs--1of2">
+						<a href="#">
+							<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
+				
+							<div class="blog-post__overlay">
+								<div class="blog-post__title">Възползвайте се максимално от възможностите на вашата баня</div>
+				
+								<div class="blog-post__date">24 юни 2015</div>
+				
+								<strong class="blog-post__link ico-arrow-right after">Прочети още</strong>
+							</div>
+						</a>
+					</div>
+				
+					<div class="blog-post col-md--1of3 col-xs--1of2">
+						<a href="#">
+							<img src="images/temp/blog-image-thumb.jpg" alt="Alt text goes here" width="381" height="348">
+				
+							<div class="blog-post__overlay">
+								<div class="blog-post__title">Възползвайте се максимално от възможностите на вашата баня</div>
+				
+								<div class="blog-post__date">24 юни 2015</div>
+				
+								<strong class="blog-post__link ico-arrow-right after">Прочети още</strong>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
