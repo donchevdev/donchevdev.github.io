@@ -422,6 +422,30 @@ img.mfp-img {
 .ico-arrow-down.before:before,
 .ico-arrow-down.after:after { width: 9px; height: 13px; background-image: url(/images/icons/ico-arrow-down.png); }
 
+.ico-human-form:not(.before):not(.after),
+.ico-human-form.before:before,
+.ico-human-form.after:after { width: 10px; height: 12px; background-image: url(/images/icons/ico-human-form.png); }
+
+.ico-phone-form:not(.before):not(.after),
+.ico-phone-form.before:before,
+.ico-phone-form.after:after { width: 12px; height: 12px; background-image: url(/images/icons/ico-phone-form.png); }
+
+.ico-email-form:not(.before):not(.after),
+.ico-email-form.before:before,
+.ico-email-form.after:after { width: 16px; height: 11px; background-image: url(/images/icons/ico-email-form.png); }
+
+.ico-pen-form:not(.before):not(.after),
+.ico-pen-form.before:before,
+.ico-pen-form.after:after { width: 16px; height: 16px; background-image: url(/images/icons/ico-pen-form.png); }
+
+.ico-locker-form:not(.before):not(.after),
+.ico-locker-form.before:before,
+.ico-locker-form.after:after { width: 12px; height: 15px; background-image: url(/images/icons/ico-locker-form.png); }
+
+.ico-envelope:not(.before):not(.after),
+.ico-envelope.before:before,
+.ico-envelope.after:after { width: 20px; height: 15px; background-image: url(/images/icons/ico-envelope.png); }
+
 .logo { width: 163px; height: 46px; background-image: url(/images/logo.png); }
 
 @media (max-width: 1023px) {
@@ -535,7 +559,31 @@ img.mfp-img {
 	.ico-arrow-down.before:before,
 	.ico-arrow-down.after:after { background-image: url(/images/icons/ico-arrow-down@2x.png); }
 
-  	.logo { background-image: url(/images/logo@2x.png); }
+  .ico-human-form:not(.before):not(.after),
+  .ico-human-form.before:before,
+  .ico-human-form.after:after {background-image: url(/images/icons/ico-human-form@2x.png); }
+
+  .ico-phone-form:not(.before):not(.after),
+  .ico-phone-form.before:before,
+  .ico-phone-form.after:after {background-image: url(/images/icons/ico-phone-form@2x.png); }
+
+  .ico-email-form:not(.before):not(.after),
+  .ico-email-form.before:before,
+  .ico-email-form.after:after {background-image: url(/images/icons/ico-email-form@2x.png); }
+
+  .ico-pen-form:not(.before):not(.after),
+  .ico-pen-form.before:before,
+  .ico-pen-form.after:after {background-image: url(/images/icons/ico-pen-form@2x.png); }
+
+  .ico-locker-form:not(.before):not(.after),
+  .ico-locker-form.before:before,
+  .ico-locker-form.after:after {background-image: url(/images/icons/ico-locker-form@2x.png); }
+
+  .ico-envelope:not(.before):not(.after),
+  .ico-envelope.before:before,
+  .ico-envelope.after:after {background-image: url(/images/icons/ico-envelope@2x.png); }
+
+  .logo { background-image: url(/images/logo@2x.png); }
 }
 
 /* ------------------------------------------------------------ *\
@@ -570,8 +618,9 @@ img.mfp-img {
 
 .section-secondary h2 { margin-bottom: 55px; }
 
-.section-secondary .section__foot { max-width: 935px; margin: 0 auto; }
+.section-secondary .section__head { margin-bottom: 50px; }
 .section-secondary .section__body { display: flex; justify-content: space-between; }
+.section-secondary .section__foot { max-width: 935px; margin: 0 auto; }
 .section-secondary .section__form { flex: 0 0 48.33%; text-align: left; }
 
 .section-secondary .section__actions a { position: relative; display: inline-block; font-size: 18px; font-weight: 700; text-decoration: none; }
@@ -755,6 +804,24 @@ img.mfp-img {
 \* ------------------------------------------------------------ */
 
 .slider-images .slick-list { max-width: 626px; padding-right: 120px; overflow: visible; }
+
+/* ------------------------------------------------------------ *\
+  Form Elements
+\* ------------------------------------------------------------ */
+
+.form-actions { padding-top: 50px; }
+
+.form-row { margin-bottom: 12px; }
+
+.form-row[class*="ico"] { position: relative; }
+.form-row[class*="ico"] .form-field { padding-left: 50px; }
+.form-row[class*="ico"]:before { position: absolute; top: 30px; left: 25px; transform: translate(-50%, -50%); }
+.form-row--captcha { display: flex; justify-content: space-between; align-items: center; }
+.form-row--captcha img { margin: 0 30px; }
+
+.form-field { display: block; width: 100%; height: 60px; flex: 0 1 100%; padding: 0 20px; border: 1px solid #d5e2ea; border-radius: 6px; color: rgba(39, 42, 53, 0.5); transition: padding .15s, border-color .15s, color .15s; }
+.form-field:focus { border-color: #272a35; color: #272a35; }
+.form-field--textarea { height: 194px; padding-top: 18px; padding-bottom: 18px; resize: none; }
 
 /* ------------------------------------------------------------ *\
 	Footer
