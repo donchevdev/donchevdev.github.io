@@ -18,11 +18,11 @@ function _instanceof(e,t){return null!=t&&"undefined"!=typeof Symbol&&t[Symbol.h
 /*
  * Global variables
  */
-var $doc      = $(document);
-var $win      = $(window);
-var $services = $('.services');
-var $offset   = $('.js-static-header');
-var $header   = $('.header');
+var $doc          = $(document);
+var $win          = $(window);
+var $sliderMobile = $('.slider-mobile');
+var $offset       = $('.js-static-header');
+var $header       = $('.header');
 
 /*
  * Move language navigation
@@ -40,12 +40,12 @@ startFader();
 $win
 	.on('load resize', function() {
 		/*
-		 * Responsive slick slider for services
+		 * Responsive slick slider
 		 */
-		if ($services.hasClass('slick-initialized') && $win.outerWidth() >= 768) {
-			$services.slick('unslick');
-		} else if (!$services.hasClass('slick-initialized') && $win.outerWidth() < 768) {
-			$('.services').slick({
+		if ($sliderMobile.hasClass('slick-initialized') && $win.outerWidth() >= 768) {
+			$sliderMobile.slick('unslick');
+		} else if (!$sliderMobile.hasClass('slick-initialized') && $win.outerWidth() < 768) {
+			$sliderMobile.slick({
 				dots    : true,
 				infinite: false,
 				arrows  : false

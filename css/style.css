@@ -688,6 +688,19 @@ img.mfp-img {
 }
 
 /* ------------------------------------------------------------ *\
+  Slider Mobile
+\* ------------------------------------------------------------ */
+
+@media (max-width: 767px) {
+  .slider-mobile .slick-list { padding: 0 20px; overflow: visible; }
+
+  .slider-mobile .slick-dots { display: flex; justify-content: center; }
+  .slider-mobile .slick-dots li { width: 8px; height: 8px; flex: 0 0 8px; margin: 0 6px; border-radius: 50%; background: #dee0e6; transition: box-shadow .15s, background .15s; }
+  .slider-mobile .slick-dots .slick-active { box-shadow: 0 0 0 3px #1d8edd; background: #1d8edd; }
+  .slider-mobile .slick-dots button { display: none; }
+}
+
+/* ------------------------------------------------------------ *\
 	List Checks
 \* ------------------------------------------------------------ */
 
