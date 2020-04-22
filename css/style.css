@@ -824,6 +824,15 @@ img.mfp-img {
 .form-field--textarea { height: 194px; padding-top: 18px; padding-bottom: 18px; resize: none; }
 
 /* ------------------------------------------------------------ *\
+  List Links Icons
+\* ------------------------------------------------------------ */
+
+.list-links-icons a { text-decoration: none; }
+.list-links-icons li { position: relative; padding-left: 30px; }
+.list-links-icons li:before { content: ''; position: absolute; top: 50%; left: 10px; transform: translate(-50%, -50%); }
+.list-links-icons li + li { margin-top: 8px; }
+
+/* ------------------------------------------------------------ *\
 	Footer
 \* ------------------------------------------------------------ */
 
@@ -845,11 +854,6 @@ img.mfp-img {
 
 .footer .footer__social-link { display: inline-block; vertical-align: middle; transition: opacity .15s; }
 .footer .footer__social-link:hover { opacity: .7; }
-
-.footer .footer__list a { text-decoration: none; }
-.footer .footer__list li { position: relative; padding-left: 30px; }
-.footer .footer__list li:before { content: ''; position: absolute; top: 50%; left: 10px; transform: translate(-50%, -50%); }
-.footer .footer__list li + li { margin-top: 8px; }
 
 .footer .footer__entry { margin-bottom: 10px; }
 .footer .footer__entry a { font-weight: 700; text-decoration: none; transition: color .15s; }
