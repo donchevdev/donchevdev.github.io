@@ -571,6 +571,8 @@ img.mfp-img {
 .section-secondary h2 { margin-bottom: 55px; }
 
 .section-secondary .section__foot { max-width: 935px; margin: 0 auto; }
+.section-secondary .section__body { display: flex; justify-content: space-between; }
+.section-secondary .section__form { flex: 0 0 48.33%; text-align: left; }
 
 .section-secondary .section__actions a { position: relative; display: inline-block; font-size: 18px; font-weight: 700; text-decoration: none; }
 .section-secondary .section__actions a:before { content: ''; position: absolute; width: 0; height: 1px; left: 50%; bottom: 0; background: #fff; transition: width .15s, left .15s; }
