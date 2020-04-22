@@ -790,10 +790,6 @@ img.mfp-img {
 .property .property__image { margin-bottom: 15px; border-radius: 4px; overflow: hidden; }
 .property .property__image img { display: block; width: 100%; }
 
-@media (max-width: 767px) {
-	.properties .property:nth-child(n+3) { margin-top: 20px; }
-}
-
 @media (max-width: 539px) {
 	.properties { display: block; padding: 0 10px; margin: 0 0 35px; border-radius: 4px; overflow: hidden; background: #fff; }
 	
@@ -819,9 +815,6 @@ img.mfp-img {
 /* ------------------------------------------------------------ *\
 	Projects
 \* ------------------------------------------------------------ */
-
-.projects .project { margin-bottom: 20px; }
-.projects .project:nth-last-child(-n+4) { margin-bottom: 0; }
 
 .project { position: relative; font-size: 14px; line-height: 1.43; color: #fff; text-align: center; }
 
@@ -912,7 +905,7 @@ img.mfp-img {
 .footer .footer__title { margin-bottom: 13px; font-size: 16px; font-weight: 700; color: #fff; }
 .footer .list-links-icons { margin-bottom: 0; }
 
-.footer .footer__col { position: relative; padding: 0 35px; }
+.footer .footer__col { position: relative; padding: 0 35px; margin-top: 0; }
 .footer .footer__col:before { margin-left: -1px; background: rgba(255, 255, 255, .1); }
 .footer .footer__col:after { background: #16181c; }
 
