@@ -100,27 +100,34 @@ $('[href^="#"]:not([href="#"])').on('click', function(e) {
  * Filtering
  */
 $('.js-filters').each(function() {
-	var $this          = $(this);
-	var $items         = $($this.data('filter')).children();
-	var hiddenClass    = 'hidden';
-	var navActiveClass = 'active';
+	var $this            = $(this);
+	var $items           = $($this.data('filter')).children();
+	var hiddenClass      = 'hidden';
+	var navActiveClass   = 'active';
+	var navExpandedClass = 'quicknav--expanded';
 
 	$this.on('click', 'a', function(e) {
-		var $this    = $(this);
-		var href     = $this.attr('href').split('#').pop();
+		var $a       = $(this);
+		var href     = $a.attr('href').split('#').pop();
 		var $targets = href == 'all' ? $items : $items.filter('[data-category="' + href + '"]');
 
 		$items.addClass(hiddenClass);
 
 		$targets.removeClass(hiddenClass);
 
-		$this
+		$this.removeClass(navExpandedClass);
+
+		$a
 			.parent()
 				.addClass(navActiveClass)
 				.siblings()
 					.removeClass(navActiveClass);
 
 		return false;
+	});
+
+	$this.on('click', '.active a', function() {
+		$this.addClass(navExpandedClass);
 	});
 });
 

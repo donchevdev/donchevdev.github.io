@@ -693,6 +693,10 @@ img.mfp-img {
 	/*  Modifier: Section Secondary Alt */
 
 	.section-secondary--alt { padding-bottom: 0; }
+
+  /*  Modifier: Section Secondary Primary */
+
+  .section-secondary--primary { padding-bottom: 60px; }
 }
 
 /* ------------------------------------------------------------ *\
