@@ -321,6 +321,10 @@ h4,
 
 @media (max-width: 767px) {
 	.intro-small { padding: 25px 0; }
+
+	/*  Modifier: Intro Small Alt */
+	
+	.intro-small--alt { padding-bottom: 55px; }
 }
 
 /* ------------------------------------------------------------ *\
@@ -725,18 +729,31 @@ h4,
 	Nav Scrollspy
 \* ------------------------------------------------------------ */
 
-.nav-scrollspy { position: absolute; top: 0; left: 100%; margin: 50px 0 0 20px; text-align: left; }
+.nav-scrollspy { position: absolute; top: 0; left: 100%; margin: 50px 0 0 20px; text-align: left; z-index: 5; }
 
-.nav-scrollspy a { position: relative; display: inline-block; height: 60px; padding-left: 60px; vertical-align: middle; border-radius: 60px; box-shadow: 0px 0px 16px 0px rgba(30, 43, 85, 0.35); font-family: 'Averta Demo PE'; font-size: 18px; line-height: 60px; font-weight: 700; color: #151c33; text-align: left; text-decoration: none; transition: box-shadow .15s, background .15s; }
+.nav-scrollspy a { position: relative; display: inline-block; height: 60px; padding-left: 60px; vertical-align: middle; border-radius: 60px; box-shadow: 0px 0px 16px 0px rgba(30, 43, 85, 0.35); font-family: 'Averta Demo PE'; font-size: 18px; line-height: 60px; font-weight: 700; color: #151c33; text-align: left; text-decoration: none; background: #fff; transition: box-shadow .15s, background .15s; }
 .nav-scrollspy a:before { content: ''; position: absolute; top: 50%; left: 30px; transform: translate(-50%, -50%); }
-.nav-scrollspy span { display: block; max-width: 0; padding-right: 0; white-space: nowrap; overflow: hidden; transition: max-width .15s, padding .15s; }
+.nav-scrollspy a:hover { box-shadow: none; background: #d9e2e8; }
+.nav-scrollspy a:hover span { max-width: 300px; padding-right: 30px; }
+.nav-scrollspy span { display: inline-block; max-width: 0; padding-right: 0; white-space: nowrap; overflow: hidden; transition: max-width .15s, padding .15s; }
 .nav-scrollspy li + li { margin-top: 15px; }
 
-.nav-scrollspy a:hover,
-.nav-scrollspy .active a { box-shadow: none; background: #d9e2e8; }
+.nav-scrollspy .active .ico-building-title:before { background-image: url(../images/icons/ico-building-lightblue@2x.png); }
+.nav-scrollspy .active .ico-houses-title:before { background-image: url(../images/icons/ico-houses-lightblue@2x.png); }
+.nav-scrollspy .active .ico-pools-title:before { background-image: url(../images/icons/ico-pools-lightblue@2x.png); }
+.nav-scrollspy .active .ico-tools-title:before { background-image: url(../images/icons/ico-tools-lightblue@2x.png); }
 
-.nav-scrollspy .active span,
-.nav-scrollspy a:hover span { max-width: 300px; padding-right: 30px; }
+@media (max-width: 1700px) {
+	.nav-scrollspy { right: 0; left: auto; margin-right: -80px; text-align: right; }
+}
+
+@media (max-width: 1400px) {
+	.nav-scrollspy { margin-right: 20px; }
+}
+
+@media (max-width: 767px) {
+	.nav-scrollspy { right: -8px; margin-right: 0; }
+}
 
 /* ------------------------------------------------------------ *\
 	Slick

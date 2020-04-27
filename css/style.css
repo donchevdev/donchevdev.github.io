@@ -721,6 +721,18 @@ img.mfp-img {
 
 .section-secondary--primary { padding-bottom: 80px; }
 
+@media (max-width: 1700px) {
+  .section-secondary.is-stuck .nav-scrollspy { right: 50%; left: auto; margin: 50px -680px 0 0; }
+}
+
+@media (max-width: 1400px) {
+  .section-secondary.is-stuck .nav-scrollspy { margin-right: -580px; }
+}
+
+@media (max-width: 1240px) {
+  .section-secondary.is-stuck .nav-scrollspy { right: 40px; margin-right: 0; }
+}
+
 @media (max-width: 767px) {
 	.section-secondary { padding: 40px 0; }
 	
@@ -729,6 +741,7 @@ img.mfp-img {
   .section-secondary .section__head { margin-bottom: 0; }
   .section-secondary .section__body { display: block; }
   .section-secondary .section__form { margin-bottom: 30px; }
+  .section-secondary.is-stuck .nav-scrollspy { right: 12px; }
 
 	/*  Modifier: Section Secondary Alt */
 

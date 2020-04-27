@@ -28,6 +28,7 @@ var $win          = $(window);
 var $sliderMobile = $('.slider-mobile');
 var $offset       = $('.js-static-header');
 var $header       = $('.header');
+var $jsSticky     = $('.js-sticky');
 
 /*
  * Move language navigation
@@ -91,10 +92,12 @@ $win
 		var winST 	   = $win.scrollTop();
 		var stuckClass = 'is-stuck';
 
-		if (winST > $('.js-sticky').offset().top) {
-			$('.js-sticky').addClass(stuckClass);
-		} else {
-			$('.js-sticky').removeClass(stuckClass);
+		if ($jsSticky.length) {
+			if (winST > $jsSticky.offset().top) {
+				$jsSticky.addClass(stuckClass);
+			} else {
+				$jsSticky.removeClass(stuckClass);
+			}
 		}
 	});
 
