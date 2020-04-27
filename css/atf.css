@@ -722,6 +722,23 @@ h4,
 .list-properties img { float: left; margin-right: 10px; }
 
 /* ------------------------------------------------------------ *\
+	Nav Scrollspy
+\* ------------------------------------------------------------ */
+
+.nav-scrollspy { position: absolute; top: 0; left: 100%; margin: 50px 0 0 20px; text-align: left; }
+
+.nav-scrollspy a { position: relative; display: inline-block; height: 60px; padding-left: 60px; vertical-align: middle; border-radius: 60px; box-shadow: 0px 0px 16px 0px rgba(30, 43, 85, 0.35); font-family: 'Averta Demo PE'; font-size: 18px; line-height: 60px; font-weight: 700; color: #151c33; text-align: left; text-decoration: none; transition: box-shadow .15s, background .15s; }
+.nav-scrollspy a:before { content: ''; position: absolute; top: 50%; left: 30px; transform: translate(-50%, -50%); }
+.nav-scrollspy span { display: block; max-width: 0; padding-right: 0; white-space: nowrap; overflow: hidden; transition: max-width .15s, padding .15s; }
+.nav-scrollspy li + li { margin-top: 15px; }
+
+.nav-scrollspy a:hover,
+.nav-scrollspy .active a { box-shadow: none; background: #d9e2e8; }
+
+.nav-scrollspy .active span,
+.nav-scrollspy a:hover span { max-width: 300px; padding-right: 30px; }
+
+/* ------------------------------------------------------------ *\
 	Slick
 \* ------------------------------------------------------------ */
 
@@ -843,3 +860,4 @@ h4,
 .slick-arrow.slick-hidden {
     display: none;
 }
+

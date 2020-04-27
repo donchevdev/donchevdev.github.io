@@ -686,10 +686,13 @@ img.mfp-img {
 	Section Secondary
 \* ------------------------------------------------------------ */
 
-.section-secondary { padding: 50px 0; text-align: center; }
+.section-secondary { position: relative; padding: 50px 0; text-align: center; }
+.section-secondary.animated { transform: none; }
+.section-secondary.is-stuck .nav-scrollspy { position: fixed; top: 0; left: 50%; margin-left: 620px; }
 
 .section-secondary h2 { margin-bottom: 55px; }
 
+.section-secondary .container { position: relative; }
 .section-secondary .section__head { margin-bottom: 50px; }
 .section-secondary .section__body { display: flex; justify-content: space-between; }
 .section-secondary .section__foot { max-width: 935px; margin: 0 auto; }
