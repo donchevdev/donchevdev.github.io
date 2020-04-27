@@ -655,9 +655,13 @@ h4,
 }
 
 @media (max-width: 767px) {
+	.section-project-alt + .section-secondary { padding-top: 26vw; }
+
 	.section-project-alt .container { display: block; }
 	.section-project-alt .section__map { margin-bottom: -18vw; }
-	.section-project-alt + .section-secondary { padding-top: 26vw; }
+	.section-project-alt .section__actions { display: block; text-align: center; }
+	.section-project-alt .section__actions .btn { display: block; max-width: 450px; margin: 0 auto; }
+	.section-project-alt .section__actions .btn + .btn { margin-top: 20px; }
 }
 
 /* ------------------------------------------------------------ *\
