@@ -612,11 +612,24 @@ h4,
 	Section Project
 \* ------------------------------------------------------------ */
 
-.section-project { padding: 50px 0; }
+.section-project { padding: 70px 0 50px; }
 
 .section-project .container { display: flex; }
 .section-project .section__aside { flex: 0 0 380px; margin-left: 20px; }
 .section-project .section__content { flex: 0 1 100%; }
+
+@media (max-width: 1023px) {
+	.section-project .section__aside { flex: 0 0 240px; }
+}
+
+@media (max-width: 767px) {
+	.section-project { padding-bottom: 0; }
+	.section-project + .section-secondary { padding-top: 140px; }
+
+	.section-project .container { display: block; }
+	.section-project .section__aside { position: relative; margin: 0 0 -110px; z-index: 3; }
+	.section-project .section__content { margin-bottom: 20px; }
+}
 
 /* ------------------------------------------------------------ *\
 	Quicknav
@@ -774,9 +787,22 @@ h4,
 .intro-alt h1 { color: #fff; }
 
 .intro-alt .btn { position: absolute; top: auto; bottom: 0; left: 20px; transform: translateY(50%); }
-.intro-alt .container { position: relative; display: flex; }
+.intro-alt .container { position: relative; display: flex; align-items: flex-start; }
 .intro-alt .intro__image { flex: 0 0 365px; margin: 0 0 -30px 95px; box-shadow: 0 0 16px rgba(30, 43, 85, 0.35); }
-.intro-alt .intro__content { flex: 0 1 100%; }
+.intro-alt .intro__content { flex: 0 1 100%; padding-bottom: 50px; }
+
+@media (max-width: 1023px) {
+	.intro-alt .intro__image { flex: 0 0 240px; }
+}
+
+@media (max-width: 767px) {
+	.intro-alt { position: relative; padding: 30px 0 50px; }
+	
+	.intro-alt .btn { left: 50%; transform: translate(-50%, 50%); white-space: nowrap; }
+	.intro-alt .container { position: static; display: block; }
+	.intro-alt .intro__image { margin-bottom: 0; margin: 0; }
+	.intro-alt .intro__content { padding-bottom: 10px; }
+}
 
 /* ------------------------------------------------------------ *\
 	Accordion
@@ -784,7 +810,7 @@ h4,
 
 .accordion { padding: 5px; border-radius: 4px; background: #e9f0f4; }
 
-.accordion .accordion__body { max-height: 0; overflow: hidden; text-align: center; transition: max-height .15s; }
+.accordion .accordion__body { max-height: 0; padding-bottom: 0; overflow: hidden; text-align: center; transition: max-height .15s, padding .15s; }
 
 .accordion .accordion__section { position: relative; padding: 0 40px; border-radius: 4px; transition: background .15s; }
 .accordion .accordion__section + .accordion__section:before { top: 0; background: #fff; }
@@ -792,9 +818,9 @@ h4,
 
 .accordion .accordion__section--expanded { background: #fff; }
 .accordion .accordion__section--expanded .accordion__head span:after { transform: rotate(0deg); }
-.accordion .accordion__section--expanded .accordion__body { max-height: 800px; }
+.accordion .accordion__section--expanded .accordion__body { max-height: 800px; padding-bottom: 30px; }
 
-.accordion .accordion__head { position: relative; padding: 18px 40px; font-size: 18px; font-weight: 700; color: #151c33; cursor: pointer; transition: opacity .15s; }
+.accordion .accordion__head { position: relative; padding: 18px 60px 18px 40px; font-size: 18px; font-weight: 700; color: #151c33; cursor: pointer; transition: opacity .15s; }
 .accordion .accordion__head:hover { opacity: .7; }
 .accordion .accordion__head:before { content: ''; position: absolute; width: 0; height: 0; top: 50%; left: 12px; margin-top: -7px; border-width: 7px 0 7px 11px; border-style: solid; border-color: transparent transparent transparent #121b31; }
 .accordion .accordion__head:after { content: ''; position: absolute; width: 36px; height: 36px; top: 50%; right: 5px; margin-top: -18px; border-radius: 50%; 
@@ -814,6 +840,13 @@ h4,
 
 .accordion .accordion__section.accordion__section--expanded:before,
 .accordion .accordion__section.accordion__section--expanded:after { opacity: 0; visibility: hidden; }
+
+@media (max-width: 767px) {
+	.accordion .accordion__section { padding: 0; }
+
+	.accordion .accordion__section + .accordion__section:before,
+	.accordion .accordion__section + .accordion__section:after { right: 13px; left: 13px; }
+}
 
 /* ------------------------------------------------------------ *\
 	Slick
