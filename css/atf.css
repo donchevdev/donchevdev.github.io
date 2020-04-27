@@ -632,6 +632,24 @@ h4,
 }
 
 /* ------------------------------------------------------------ *\
+	Section Project Alt
+\* ------------------------------------------------------------ */
+
+.section-project-alt { position: relative; padding-top: 50px; z-index: 1; }
+
+.section-project-alt + .section-secondary { padding-top: 275px; }
+
+.section-project-alt .container { display: flex; flex-flow: row wrap; justify-content: space-between; }
+.section-project-alt .section__map { margin: 35px 0 -225px; }
+.section-project-alt .section__slider { flex: 0 0 40%; }
+.section-project-alt .section__content { flex: 0 0 50%; }
+
+.section-project-alt .section__actions { display: flex; justify-content: space-between; }
+.section-project-alt .section__actions .btn { flex: 0 0 48%; box-shadow: none; }
+.section-project-alt .section__actions .btn:hover { top: 0; }
+.section-project-alt .section__actions .ico-building-mini-blue:hover:before { background-image: url(../images/icons/ico-building-mini-blue-hover.png); }
+
+/* ------------------------------------------------------------ *\
 	Quicknav
 \* ------------------------------------------------------------ */
 
@@ -777,6 +795,17 @@ h4,
 @media (max-width: 767px) {
 	.nav-scrollspy { right: -8px; margin-right: 0; }
 }
+
+/* ------------------------------------------------------------ *\
+	List Info Boxes
+\* ------------------------------------------------------------ */
+
+.list-info-boxes { display: flex; margin: 0 -10px 20px; justify-content: space-between; font-size: 18px; color: rgba(36, 42, 62, 0.5); text-align: center; }
+
+.list-info-boxes li { flex: 0 0 21%; padding: 10px; margin: 0 10px; border-radius: 4px; background: #e9f0f4; }
+.list-info-boxes strong { display: block; font-family: 'Averta Demo PE', sans-serif; color: #1a8bdb; }
+
+.list-info-boxes .green { color: #78b421; }
 
 /* ------------------------------------------------------------ *\
 	Intro Alt

@@ -482,6 +482,14 @@ img.mfp-img {
 .ico-tools-title.before:before,
 .ico-tools-title.after:after { width: 30px; height: 30px; background-image: url(/images/icons/ico-tools-title.png); }
 
+.ico-envelope-white:not(.before):not(.after),
+.ico-envelope-white.before:before,
+.ico-envelope-white.after:after { width: 20px; height: 15px; background-image: url(/images/icons/ico-envelope-white.png); }
+
+.ico-building-mini-blue:not(.before):not(.after),
+.ico-building-mini-blue.before:before,
+.ico-building-mini-blue.after:after { width: 16px; height: 16px; background-image: url(/images/icons/ico-building-mini-blue.png); }
+
 .logo { width: 163px; height: 46px; background-image: url(/images/logo.png); }
 
 @media (max-width: 1023px) {
@@ -654,6 +662,14 @@ img.mfp-img {
   .ico-tools-title:not(.before):not(.after),
   .ico-tools-title.before:before,
   .ico-tools-title.after:after { background-image: url(/images/icons/ico-tools-title@2x.png); }
+
+  .ico-envelope-white:not(.before):not(.after),
+  .ico-envelope-white.before:before,
+  .ico-envelope-white.after:after { background-image: url(/images/icons/ico-envelope-white@2x.png); }
+
+  .ico-building-mini-blue:not(.before):not(.after),
+  .ico-building-mini-blue.before:before,
+  .ico-building-mini-blue.after:after { background-image: url(/images/icons/ico-building-mini-blue@2x.png); }
 
   .logo { background-image: url(/images/logo@2x.png); }
 }
